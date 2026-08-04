@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=3 format=3 uid="uid://cqa23eiocwyk8"]
 
 [ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://MadMiffyBackground.png" id="1_v6p8y"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Jersey15-Regular.ttf" id="2_ak2if"]
 
 [node name="TitleScreen" type="Node2D"]
 
@@ -11,9 +12,12 @@ scale = Vector2(0.602161, 0.600958)
 texture = ExtResource("1_v6p8y")
 
 [node name="Title" type="RichTextLabel" parent="."]
-offset_left = 493.0
-offset_top = 267.0
-offset_right = 569.0
-offset_bottom = 284.0
-theme_override_font_sizes/normal_font_size = 11
+clip_contents = false
+offset_left = 346.0
+offset_top = 158.0
+offset_right = 734.0
+offset_bottom = 267.0
+theme_override_constants/outline_size = 40
+theme_override_fonts/normal_font = ExtResource("2_ak2if")
+theme_override_font_sizes/normal_font_size = 108
 text = "MadMiffy"
