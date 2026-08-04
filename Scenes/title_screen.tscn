@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqa23eiocwyk8"]
 
-[ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://MadMiffyBackground.png" id="1_v6p8y"]
-[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Jersey15-Regular.ttf" id="2_ak2if"]
+[ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://Images/MadMiffyBackground.png" id="1_p3fck"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
 
 [node name="TitleScreen" type="Node2D"]
 
@@ -9,7 +9,7 @@
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.602161, 0.600958)
-texture = ExtResource("1_v6p8y")
+texture = ExtResource("1_p3fck")
 
 [node name="Title" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -21,7 +21,7 @@ theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_constants/outline_size = 40
-theme_override_fonts/normal_font = ExtResource("2_ak2if")
+theme_override_fonts/normal_font = ExtResource("2_4gxqj")
 theme_override_font_sizes/normal_font_size = 130
 text = "MadMiffy"
 
@@ -35,20 +35,20 @@ scale = Vector2(1.0025, 1)
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_fonts/font = ExtResource("2_ak2if")
+theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 30
 text = "Start Game"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_fonts/font = ExtResource("2_ak2if")
+theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 30
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_fonts/font = ExtResource("2_ak2if")
+theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
