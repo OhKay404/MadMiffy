@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqa23eiocwyk8"]
+
+[ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://MadMiffyBackground.png" id="1_v6p8y"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.602161, 0.600958)
+texture = ExtResource("1_v6p8y")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 493.0
+offset_top = 267.0
+offset_right = 569.0
+offset_bottom = 284.0
+theme_override_font_sizes/normal_font_size = 11
+text = "MadMiffy"
