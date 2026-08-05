@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqa23eiocwyk8"]
 
-[ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://title_screen.gd" id="1_4gxqj"]
+[ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://Images/MadMiffyBackground.png" id="1_p3fck"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
 
