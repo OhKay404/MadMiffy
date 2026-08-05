@@ -1,3 +1,60 @@
-[gd_scene format=3 uid="uid://cybggljo6l5c7"]
+[gd_scene load_steps=4 format=3 uid="uid://cybggljo6l5c7"]
+
+[ext_resource type="Texture2D" uid="uid://c1og6gr72g3vh" path="res://Images/MadMiffyBackground.png" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="2_2fcgv"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_qnqh0"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.600014, 0.600041)
+texture = ExtResource("1_c7xwe")
+
+[node name="HeartContainer" type="HBoxContainer" parent="."]
+offset_left = 210.0
+offset_top = 135.0
+offset_right = 1326.0
+offset_bottom = 341.0
+scale = Vector2(0.592029, 0.592029)
+
+[node name="Heart" type="TextureRect" parent="HeartContainer"]
+layout_mode = 2
+texture = ExtResource("2_2fcgv")
+
+[node name="Heart2" type="TextureRect" parent="HeartContainer"]
+layout_mode = 2
+texture = ExtResource("2_2fcgv")
+
+[node name="Heart3" type="TextureRect" parent="HeartContainer"]
+layout_mode = 2
+texture = ExtResource("2_2fcgv")
+
+[node name="Heart4" type="TextureRect" parent="HeartContainer"]
+layout_mode = 2
+texture = ExtResource("2_2fcgv")
+
+[node name="Heart5" type="TextureRect" parent="HeartContainer"]
+layout_mode = 2
+texture = ExtResource("2_2fcgv")
+
+[node name="Level" type="RichTextLabel" parent="."]
+offset_left = 411.0
+offset_top = 255.0
+offset_right = 657.0
+offset_bottom = 351.0
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("3_qnqh0")
+theme_override_font_sizes/normal_font_size = 85
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="."]
+offset_left = 501.0
+offset_top = 394.0
+offset_right = 630.0
+offset_bottom = 489.0
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("3_qnqh0")
+theme_override_font_sizes/normal_font_size = 85
+text = "0.0"

@@ -10,7 +10,7 @@ script = ExtResource("1_4gxqj")
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-scale = Vector2(0.602161, 0.600958)
+scale = Vector2(0.600086, 0.600203)
 texture = ExtResource("1_p3fck")
 
 [node name="Title" type="RichTextLabel" parent="."]
