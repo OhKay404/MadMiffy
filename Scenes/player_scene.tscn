@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://k8ufb5xgrnoc"]
+[gd_scene load_steps=4 format=3 uid="uid://k8ufb5xgrnoc"]
 
+[ext_resource type="Script" uid="uid://dp0oq0vget5tr" path="res://Scripts/player_scene.gd" id="1_7cibt"]
 [ext_resource type="Texture2D" uid="uid://b67x17hmuqu58" path="res://Images/miffySprite.png" id="1_8tj53"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7cibt"]
@@ -7,6 +8,7 @@ radius = 63.0
 height = 192.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7cibt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.62939e-06, -3.8147e-06)

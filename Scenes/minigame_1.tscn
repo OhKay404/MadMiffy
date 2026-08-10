@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bv1ubjpgwt3ky"]
+
+[node name="minigame_1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
