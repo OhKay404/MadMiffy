@@ -1,11 +1,76 @@
-[gd_scene format=3 uid="uid://bv1ubjpgwt3ky"]
+[gd_scene load_steps=6 format=3 uid="uid://bv1ubjpgwt3ky"]
+
+[ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_enoba"]
+[ext_resource type="PackedScene" uid="uid://k8ufb5xgrnoc" path="res://Scenes/player.tscn" id="2_11mgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chyva"]
+size = Vector2(1216.83, 51.0309)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
+size = Vector2(710.811, 34.0148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6tb2"]
+size = Vector2(1612.56, 76.0694)
 
 [node name="minigame_1" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ScrollingBackground" type="Parallax2D" parent="."]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Background" type="TextureRect" parent="ScrollingBackground"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.600026, 0.600063)
+texture = ExtResource("1_enoba")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Platform1" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1"]
+offset_left = -35.0
+offset_top = 622.0
+offset_right = 1183.0
+offset_bottom = 703.0
+scale = Vector2(0.999537, 0.728954)
+color = Color(0.411765, 0.462745, 0.207843, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+position = Vector2(573.5, 654.249)
+scale = Vector2(1.00014, 1.02874)
+shape = SubResource("RectangleShape2D_chyva")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(300, 48)
+scale = Vector2(0.277068, 0.741001)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = -31.0
+offset_top = 611.0
+offset_right = 1187.0
+offset_bottom = 692.0
+scale = Vector2(0.582653, 0.421401)
+color = Color(0.411765, 0.462745, 0.207843, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(323.129, 628.066)
+shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(500, -65)
+scale = Vector2(0.277068, 0.741001)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3"]
+offset_left = -31.0
+offset_top = 611.0
+offset_right = 1187.0
+offset_bottom = 692.0
+scale = Vector2(0.582653, 0.421401)
+color = Color(0.411765, 0.462745, 0.207843, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(323.963, 628.096)
+scale = Vector2(0.440383, -0.451179)
+shape = SubResource("RectangleShape2D_f6tb2")
+
+[node name="Player" parent="." instance=ExtResource("2_11mgy")]
+position = Vector2(116, 461)
