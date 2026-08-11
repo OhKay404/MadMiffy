@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv1ubjpgwt3ky"]
+[gd_scene load_steps=14 format=3 uid="uid://bv1ubjpgwt3ky"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://k8ufb5xgrnoc" path="res://Scenes/player.tscn" id="2_11mgy"]
+[ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://gxswmgltkwyx" path="res://Scripts/heart_collection.gd" id="3_o6yob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chyva"]
 size = Vector2(1216.83, 51.0309)
@@ -14,6 +16,75 @@ size = Vector2(1612.56, 76.0694)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6yob"]
 size = Vector2(22.5801, 0.666845)
+
+[sub_resource type="Animation" id="Animation_f6tb2"]
+resource_name = "floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart/Heart1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(545, 306), Vector2(545, 297)]
+}
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart/Heart1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(545, 306)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart2/Heart2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(545, 306)]
+}
+
+[sub_resource type="Animation" id="Animation_5txvl"]
+resource_name = "floating2"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart2/Heart2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(545, 306), Vector2(545, 297)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5txvl"]
+_data = {
+&"RESET": SubResource("Animation_o6yob"),
+&"floating": SubResource("Animation_f6tb2"),
+&"floating2": SubResource("Animation_5txvl")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0uv5o"]
+radius = 46.0109
 
 [node name="minigame_1" type="Node2D"]
 
@@ -113,3 +184,50 @@ shape = SubResource("RectangleShape2D_o6yob")
 
 [node name="Player" parent="." instance=ExtResource("2_11mgy")]
 position = Vector2(116, 461)
+
+[node name="Heart" type="Node2D" parent="."]
+script = ExtResource("3_o6yob")
+
+[node name="Heart1" type="TextureRect" parent="Heart"]
+offset_left = 545.0
+offset_top = 306.0
+offset_right = 774.0
+offset_bottom = 521.0
+scale = Vector2(0.381885, 0.381885)
+texture = ExtResource("3_f6tb2")
+
+[node name="animation1" type="AnimationPlayer" parent="Heart"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_5txvl")
+}
+
+[node name="Area2D" type="Area2D" parent="Heart"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart/Area2D"]
+position = Vector2(589, 341)
+shape = SubResource("CircleShape2D_0uv5o")
+
+[node name="Heart2" type="Node2D" parent="."]
+position = Vector2(496, -191)
+script = ExtResource("3_o6yob")
+
+[node name="Heart2" type="TextureRect" parent="Heart2"]
+offset_left = 545.0
+offset_top = 306.0
+offset_right = 774.0
+offset_bottom = 521.0
+scale = Vector2(0.381885, 0.381885)
+texture = ExtResource("3_f6tb2")
+
+[node name="animation2" type="AnimationPlayer" parent="Heart2"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_5txvl")
+}
+
+[node name="Area2D" type="Area2D" parent="Heart2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart2/Area2D"]
+position = Vector2(589, 341)
+shape = SubResource("CircleShape2D_0uv5o")
