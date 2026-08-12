@@ -1,4 +1,3 @@
-
 # the onreadys below run immediately at the start of the game, preventing 
 # errors related to variable that haven't been defined yet in later scripts 
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://ciubhudsjrmgn"]
 
-[ext_resource type="Script" uid="uid://b6dhef1slbeno" path="res://Scenes/themed_timer.gd" id="1_rocr3"]
+[ext_resource type="Script" uid="uid://b6dhef1slbeno" path="res://Scripts/themed_timer.gd" id="1_rocr3"]
 
-[node name="Node2D" type="Node2D"]
+[node name="ThemedTimer" type="Node2D"]
 script = ExtResource("1_rocr3")
 
 [node name="timer" type="RichTextLabel" parent="."]
