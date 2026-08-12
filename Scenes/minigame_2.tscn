@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0vc2vc60i6tp"]
+
+[ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_dfb65"]
+[ext_resource type="Script" uid="uid://c3kq15bu4jq2q" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="2_rfxq2"]
+[ext_resource type="Script" uid="uid://dunljtxi5gjuv" path="res://button_1.gd" id="3_mmgun"]
+[ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="4_h684j"]
+
+[node name="Minigame_2" type="Node2D"]
+script = ExtResource("1_rfxq2")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="."]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.600026, 0.600063)
+texture = ExtResource("1_dfb65")
+
+[node name="Button_1" type="TextureButton" parent="."]
+offset_left = 123.0
+offset_top = 69.0001
+offset_right = 343.0
+offset_bottom = 275.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
+[node name="Button_2" type="TextureButton" parent="."]
+offset_left = 754.0
+offset_top = 112.0
+offset_right = 974.0
+offset_bottom = 318.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
+[node name="Button_3" type="TextureButton" parent="."]
+offset_left = 615.0
+offset_top = 347.0
+offset_right = 835.0
+offset_bottom = 553.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
+[node name="Button_4" type="TextureButton" parent="."]
+offset_left = 340.0
+offset_top = 241.0
+offset_right = 560.0
+offset_bottom = 447.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
+[node name="ThemedTimer" parent="." instance=ExtResource("4_h684j")]
+position = Vector2(660, 162)

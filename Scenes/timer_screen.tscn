@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cybggljo6l5c7"]
 
-[ext_resource type="Script" uid="uid://coxn88qhxjmci" path="res://Scripts/timer_screen.gd" id="1_2fcgv"]
-[ext_resource type="Texture2D" uid="uid://0yjvprnwug0c" path="res://Images/MadMiffyBackground.png" id="1_c7xwe"]
-[ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="2_2fcgv"]
-[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_qnqh0"]
+[ext_resource type="Script" uid="uid://coxn88qhxjmci" path="res://Scripts/timer_screen.gd" id="1_ry0ke"]
+[ext_resource type="Texture2D" uid="uid://0yjvprnwug0c" path="res://Images/MadMiffyBackground.png" id="2_tsv7m"]
+[ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="3_tpp86"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="4_cqi0v"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_2fcgv")
+[node name="TimerScreen" type="Node2D"]
+script = ExtResource("1_ry0ke")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.600014, 0.600041)
-texture = ExtResource("1_c7xwe")
+texture = ExtResource("2_tsv7m")
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 offset_left = 66.0
@@ -23,23 +23,23 @@ scale = Vector2(0.704776, 0.704776)
 
 [node name="Heart" type="TextureRect" parent="HeartContainer"]
 layout_mode = 2
-texture = ExtResource("2_2fcgv")
+texture = ExtResource("3_tpp86")
 
 [node name="Heart2" type="TextureRect" parent="HeartContainer"]
 layout_mode = 2
-texture = ExtResource("2_2fcgv")
+texture = ExtResource("3_tpp86")
 
 [node name="Heart3" type="TextureRect" parent="HeartContainer"]
 layout_mode = 2
-texture = ExtResource("2_2fcgv")
+texture = ExtResource("3_tpp86")
 
 [node name="Heart4" type="TextureRect" parent="HeartContainer"]
 layout_mode = 2
-texture = ExtResource("2_2fcgv")
+texture = ExtResource("3_tpp86")
 
 [node name="Heart5" type="TextureRect" parent="HeartContainer"]
 layout_mode = 2
-texture = ExtResource("2_2fcgv")
+texture = ExtResource("3_tpp86")
 
 [node name="Level" type="RichTextLabel" parent="."]
 offset_left = 321.0
@@ -47,7 +47,7 @@ offset_top = 337.0
 offset_right = 614.0
 offset_bottom = 455.0
 theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
-theme_override_fonts/normal_font = ExtResource("3_qnqh0")
+theme_override_fonts/normal_font = ExtResource("4_cqi0v")
 theme_override_font_sizes/normal_font_size = 100
 text = "Level #"
 
@@ -57,6 +57,6 @@ offset_top = 438.0
 offset_right = 569.0
 offset_bottom = 558.0
 theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
-theme_override_fonts/normal_font = ExtResource("3_qnqh0")
+theme_override_fonts/normal_font = ExtResource("4_cqi0v")
 theme_override_font_sizes/normal_font_size = 100
 text = "0.0"

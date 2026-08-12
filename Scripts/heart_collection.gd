@@ -10,7 +10,6 @@ extends Node2D
 signal heart_collected
 
 func _process(delta: float) -> void: # this runs EVERY FRAME! 
-	
 	if player_area.overlaps_area(self_area): # checks if overlapping
 		if self.visible:
 			emit_signal("heart_collected") #signal broadcast
