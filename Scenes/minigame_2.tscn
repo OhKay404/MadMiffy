@@ -64,6 +64,24 @@ scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
+[node name="Button_6" type="TextureButton" parent="."]
+offset_left = 441.0
+offset_top = 67.0
+offset_right = 661.0
+offset_bottom = 273.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
+[node name="Button_7" type="TextureButton" parent="."]
+offset_left = 894.0
+offset_top = 340.0
+offset_right = 1114.0
+offset_bottom = 546.0
+scale = Vector2(0.657582, 0.657582)
+texture_normal = ExtResource("2_rfxq2")
+script = ExtResource("3_mmgun")
+
 [node name="ThemedTimer" parent="." instance=ExtResource("4_h684j")]
 position = Vector2(-5, -5)
 
@@ -72,3 +90,5 @@ position = Vector2(-5, -5)
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
 [connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
 [connection signal="pressed" from="Button_5" to="Button_5" method="_on_pressed"]
+[connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]
+[connection signal="pressed" from="Button_7" to="Button_7" method="_on_pressed"]
