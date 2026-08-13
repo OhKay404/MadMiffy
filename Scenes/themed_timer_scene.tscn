@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciubhudsjrmgn"]
+[gd_scene load_steps=3 format=3 uid="uid://ciubhudsjrmgn"]
 
 [ext_resource type="Script" uid="uid://b6dhef1slbeno" path="res://Scripts/themed_timer.gd" id="1_rocr3"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_6gdgh"]
 
 [node name="ThemedTimer" type="Node2D"]
 script = ExtResource("1_rocr3")
 
 [node name="timer" type="RichTextLabel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+clip_contents = false
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 162.0
+offset_bottom = 121.0
+theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_6gdgh")
+theme_override_font_sizes/normal_font_size = 100
+text = "0.0"
