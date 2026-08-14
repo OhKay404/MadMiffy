@@ -6,6 +6,7 @@
 
 [sub_resource type="Animation" id="Animation_4gxqj"]
 resource_name = "TitleScreenFloat"
+length = 2.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -14,7 +15,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(173, 115), Vector2(173, 122), Vector2(173, 115)]
@@ -53,9 +54,9 @@ texture = ExtResource("2_twnyg")
 [node name="Title" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 173.0
-offset_top = 116.002
+offset_top = 115.0
 offset_right = 751.0
-offset_bottom = 296.002
+offset_bottom = 295.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -64,10 +65,12 @@ theme_override_fonts/normal_font = ExtResource("2_4gxqj")
 theme_override_font_sizes/normal_font_size = 165
 text = "MadMiffy"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Title")
 libraries = {
 &"": SubResource("AnimationLibrary_twnyg")
 }
+autoplay = "TitleScreenFloat"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 279.0
