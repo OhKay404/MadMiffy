@@ -47,28 +47,28 @@ texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_4" type="TextureButton" parent="."]
-offset_left = 356.0
-offset_top = 267.0
-offset_right = 576.0
-offset_bottom = 473.0
+offset_left = 431.0
+offset_top = 173.0
+offset_right = 651.0
+offset_bottom = 379.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_5" type="TextureButton" parent="."]
-offset_left = 129.0
-offset_top = 429.0
-offset_right = 349.0
-offset_bottom = 635.0
+offset_left = 173.0
+offset_top = 376.0
+offset_right = 393.0
+offset_bottom = 582.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_6" type="TextureButton" parent="."]
-offset_left = 441.0
-offset_top = 67.0
-offset_right = 661.0
-offset_bottom = 273.0
+offset_left = 412.0
+offset_top = 466.0
+offset_right = 632.0
+offset_bottom = 672.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
