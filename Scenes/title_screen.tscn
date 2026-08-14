@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=13 format=3 uid="uid://cqa23eiocwyk8"]
 
 [ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
@@ -42,6 +42,78 @@ _data = {
 &"TitleScreenFloat": SubResource("Animation_4gxqj")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vd4x"]
+bg_color = Color(0.945098, 0.956863, 0.858824, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.376471, 0.462745, 0.203922, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n82rj"]
+bg_color = Color(0.376471, 0.462745, 0.203922, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.74902, 0.811765, 0.596078, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12m1t"]
+bg_color = Color(0.945098, 0.956863, 0.858824, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.376471, 0.462745, 0.203922, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55kwv"]
+bg_color = Color(0.376471, 0.462745, 0.203922, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.74902, 0.811765, 0.596078, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twnyg"]
+bg_color = Color(0.945098, 0.956863, 0.858824, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.380392, 0.466667, 0.203922, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gxqj"]
+bg_color = Color(0.376471, 0.462745, 0.203922, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.74902, 0.811765, 0.596078, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_4gxqj")
 
@@ -54,9 +126,9 @@ texture = ExtResource("2_twnyg")
 [node name="Title" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 173.0
-offset_top = 115.0
+offset_top = 97.0
 offset_right = 751.0
-offset_bottom = 295.0
+offset_bottom = 277.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -81,23 +153,35 @@ scale = Vector2(1.0025, 1)
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/outline_size = 12
+theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_6vd4x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n82rj")
 text = "Start Game"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/outline_size = 12
+theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_12m1t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_55kwv")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/outline_size = 12
+theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
+theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_twnyg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4gxqj")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
