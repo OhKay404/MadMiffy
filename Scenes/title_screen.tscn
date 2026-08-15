@@ -4,6 +4,21 @@
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://0yjvprnwug0c" path="res://Images/MadMiffyBackground.png" id="2_twnyg"]
 
+[sub_resource type="Animation" id="Animation_twnyg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(173, 97)]
+}
+
 [sub_resource type="Animation" id="Animation_4gxqj"]
 resource_name = "TitleScreenFloat"
 length = 2.0
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(173, 115), Vector2(173, 122), Vector2(173, 115)]
-}
-
-[sub_resource type="Animation" id="Animation_twnyg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(173, 97)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_twnyg"]
@@ -118,9 +118,9 @@ corner_radius_bottom_left = 25
 script = ExtResource("1_4gxqj")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
-scale = Vector2(0.600086, 0.600203)
+offset_right = 1928.0
+offset_bottom = 1088.0
+scale = Vector2(0.59759, 0.595758)
 texture = ExtResource("2_twnyg")
 
 [node name="Title" type="RichTextLabel" parent="."]
