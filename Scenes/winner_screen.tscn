@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ku4iolk0m801"]
+[gd_scene load_steps=7 format=3 uid="uid://ku4iolk0m801"]
 
+[ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/winner_screen.gd" id="1_ncrrp"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_30022"]
+[ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyBallon.png" id="4_b2loe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -28,6 +30,7 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="winner_screen" type="Node2D"]
+script = ExtResource("1_ncrrp")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -486.0
@@ -64,3 +67,13 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 733.0
+offset_top = 116.0
+offset_right = 1941.0
+offset_bottom = 1828.0
+scale = Vector2(0.312878, 0.313758)
+texture = ExtResource("4_b2loe")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
