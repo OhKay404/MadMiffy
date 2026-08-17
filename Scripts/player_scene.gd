@@ -18,10 +18,16 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
+		update_animation("walk")
 		$Sprite2D.flip_h = true
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -SPEED
 		$Sprite2D.flip_h = false
+		update_animation("walk")
 	else:
 		velocity.x = 0
+		update_animation("idle")
 	move_and_slide()
+
+func update_animation(animation):
+	$AnimationPlayer.play(animation)
