@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ku4iolk0m801"]
+
+[ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
+
+[node name="winner_screen" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -486.0
+offset_top = -397.0
+offset_right = 1736.0
+offset_bottom = 1122.0
+rotation = 0.00410336
+pivot_offset = Vector2(1062, 736)
+texture = ExtResource("1_whwiw")
