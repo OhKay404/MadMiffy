@@ -29,8 +29,11 @@ func _process(delta: float) -> void: # running every frame brochacho
 	if timer_end: # if the timer does end...
 		#Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
+		Global.minigames_done -=1
 		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn") # back to intermission
-		#change timer_screen to level_scene??
+	
+	if Global.lives < 1:
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 
 func heart_collect() -> void: # cool function that you connect to those garlics
 	heart_collected = heart_collected + 1

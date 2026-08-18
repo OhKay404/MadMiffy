@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://ku4iolk0m801"]
+[gd_scene load_steps=16 format=3 uid="uid://dmrh5ejlotk83"]
 
-[ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/winner_screen.gd" id="1_ncrrp"]
-[ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
-[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_30022"]
-[ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyBallon.png" id="4_b2loe"]
+[ext_resource type="Script" uid="uid://bs3m63tygs781" path="res://Scripts/death_screen.gd" id="1_amiou"]
+[ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="2_vb6s7"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_tpvs2"]
+[ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyBallon.png" id="4_l3qio"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -143,8 +143,8 @@ _data = {
 &"RESET": SubResource("Animation_o6l62")
 }
 
-[node name="winner_screen" type="Node2D"]
-script = ExtResource("1_ncrrp")
+[node name="death_screen" type="Node2D"]
+script = ExtResource("1_amiou")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -486.0
@@ -152,7 +152,7 @@ offset_top = -397.0
 offset_right = 1736.0
 offset_bottom = 1122.0
 pivot_offset = Vector2(1062, 736)
-texture = ExtResource("1_whwiw")
+texture = ExtResource("2_vb6s7")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -164,9 +164,9 @@ theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_constants/outline_size = 40
-theme_override_fonts/normal_font = ExtResource("2_30022")
+theme_override_fonts/normal_font = ExtResource("3_tpvs2")
 theme_override_font_sizes/normal_font_size = 200
-text = "You Won!"
+text = "You Died!"
 
 [node name="Button" type="Button" parent="."]
 offset_left = 193.0
@@ -176,7 +176,7 @@ offset_bottom = 491.0
 pivot_offset = Vector2(188, 39)
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
-theme_override_fonts/font = ExtResource("2_30022")
+theme_override_fonts/font = ExtResource("3_tpvs2")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
@@ -188,7 +188,7 @@ offset_top = 116.0
 offset_right = 1941.0
 offset_bottom = 1828.0
 scale = Vector2(0.312878, 0.313758)
-texture = ExtResource("4_b2loe")
+texture = ExtResource("4_l3qio")
 
 [node name="BackgroundSpin" type="AnimationPlayer" parent="."]
 libraries = {
