@@ -252,8 +252,42 @@ color = Color(0.411765, 0.462745, 0.207843, 1)
 position = Vector2(1207.28, 504.147)
 shape = SubResource("RectangleShape2D_0uv5o")
 
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(612, -411)
+rotation = 1.5708
+
+[node name="ColorRect" type="ColorRect" parent="Platform7"]
+offset_left = -35.0
+offset_top = 622.0
+offset_right = 1183.0
+offset_bottom = 703.0
+scale = Vector2(0.999537, 0.728954)
+color = Color(0.411765, 0.462745, 0.207843, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
+position = Vector2(573.5, 654.249)
+scale = Vector2(1.00014, 1.02874)
+shape = SubResource("RectangleShape2D_chyva")
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(534, 744)
+rotation = 4.71239
+
+[node name="ColorRect" type="ColorRect" parent="Platform8"]
+offset_left = -35.0
+offset_top = 622.0
+offset_right = 1183.0
+offset_bottom = 703.0
+scale = Vector2(0.999537, 0.728954)
+color = Color(0.411765, 0.462745, 0.207843, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8"]
+position = Vector2(573.5, 654.249)
+scale = Vector2(1.00014, 1.02874)
+shape = SubResource("RectangleShape2D_chyva")
+
 [node name="Player" parent="." instance=ExtResource("2_11mgy")]
-position = Vector2(116, 461)
+position = Vector2(118, 460)
 
 [node name="Heart" type="Node2D" parent="."]
 script = ExtResource("3_o6yob")

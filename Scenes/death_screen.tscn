@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dmrh5ejlotk83"]
+[gd_scene load_steps=19 format=3 uid="uid://dmrh5ejlotk83"]
 
 [ext_resource type="Script" uid="uid://bs3m63tygs781" path="res://Scripts/death_screen.gd" id="1_amiou"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="2_vb6s7"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_tpvs2"]
-[ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyBallon.png" id="4_l3qio"]
+[ext_resource type="Texture2D" uid="uid://cj8ynuy6iv78e" path="res://Images/MiffyDeathBalloon.png" id="4_amiou"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -112,7 +112,7 @@ loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/path = NodePath("MiffyBalloon:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -127,7 +127,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/path = NodePath("MiffyBalloon:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -141,6 +141,43 @@ tracks/0/keys = {
 _data = {
 &"BalloonMiffy": SubResource("Animation_ms1nb"),
 &"RESET": SubResource("Animation_o6l62")
+}
+
+[sub_resource type="Animation" id="Animation_amiou"]
+resource_name = "miffy_flying"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiffyBalloon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.499146, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(591, -527), Vector2(728, -368), Vector2(647, -290), Vector2(765, -247), Vector2(656, -161), Vector2(766, -80), Vector2(709, 36)]
+}
+
+[sub_resource type="Animation" id="Animation_vb6s7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiffyBalloon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(591, -527)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpvs2"]
+_data = {
+&"RESET": SubResource("Animation_vb6s7"),
+&"miffy_flying": SubResource("Animation_amiou")
 }
 
 [node name="death_screen" type="Node2D"]
@@ -182,13 +219,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 733.0
-offset_top = 116.0
-offset_right = 1941.0
-offset_bottom = 1828.0
+[node name="MiffyBalloon" type="TextureRect" parent="."]
+offset_left = 591.0
+offset_top = -527.0
+offset_right = 1799.0
+offset_bottom = 1185.0
 scale = Vector2(0.312878, 0.313758)
-texture = ExtResource("4_l3qio")
+texture = ExtResource("4_amiou")
 
 [node name="BackgroundSpin" type="AnimationPlayer" parent="."]
 libraries = {
@@ -208,5 +245,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_j85pd")
 }
 autoplay = "BalloonMiffy"
+
+[node name="MiffyFlyingDeath" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tpvs2")
+}
+autoplay = "miffy_flying"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
