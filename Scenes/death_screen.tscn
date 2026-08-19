@@ -220,10 +220,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
 
 [node name="MiffyBalloon" type="TextureRect" parent="."]
-offset_left = 591.0
-offset_top = -527.0
-offset_right = 1799.0
-offset_bottom = 1185.0
+offset_left = 709.0
+offset_top = 36.0
+offset_right = 1917.0
+offset_bottom = 1748.0
 scale = Vector2(0.312878, 0.313758)
 texture = ExtResource("4_amiou")
 
