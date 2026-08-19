@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://dmrh5ejlotk83"]
+[gd_scene load_steps=20 format=3 uid="uid://dmrh5ejlotk83"]
 
 [ext_resource type="Script" uid="uid://bs3m63tygs781" path="res://Scripts/death_screen.gd" id="1_amiou"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="2_vb6s7"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_tpvs2"]
 [ext_resource type="Texture2D" uid="uid://cj8ynuy6iv78e" path="res://Images/MiffyDeathBalloon.png" id="4_amiou"]
+[ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_vb6s7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -213,17 +214,19 @@ offset_bottom = 491.0
 pivot_offset = Vector2(188, 39)
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("3_tpvs2")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
+theme_override_styles/pressed = ExtResource("4_vb6s7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
 
 [node name="MiffyBalloon" type="TextureRect" parent="."]
-offset_left = 709.0
-offset_top = 36.0
-offset_right = 1917.0
-offset_bottom = 1748.0
+offset_left = 591.0
+offset_top = -527.0
+offset_right = 1799.0
+offset_bottom = 1185.0
 scale = Vector2(0.312878, 0.313758)
 texture = ExtResource("4_amiou")
 

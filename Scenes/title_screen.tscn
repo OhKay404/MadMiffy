@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=14 format=3 uid="uid://cqa23eiocwyk8"]
 
 [ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://bujwf01md3nlp" path="res://Images/MadMiffyBackground_new.png" id="2_twnyg"]
+[ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_twnyg"]
 
 [sub_resource type="Animation" id="Animation_twnyg"]
 length = 0.001
@@ -158,9 +159,11 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_6vd4x")
+theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_n82rj")
 text = "Start Game"
 
@@ -169,9 +172,11 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_12m1t")
+theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_55kwv")
 text = "Settings"
 
@@ -180,9 +185,11 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_4gxqj")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_twnyg")
+theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4gxqj")
 text = "Quit"
 

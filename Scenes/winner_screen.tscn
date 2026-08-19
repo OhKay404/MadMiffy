@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://ku4iolk0m801"]
+[gd_scene load_steps=20 format=3 uid="uid://ku4iolk0m801"]
 
 [ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/winner_screen.gd" id="1_ncrrp"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_30022"]
 [ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyWinnerBallon.png" id="4_b2loe"]
+[ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_vclxf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -213,9 +214,11 @@ offset_bottom = 491.0
 pivot_offset = Vector2(188, 39)
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_30022")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
+theme_override_styles/pressed = ExtResource("4_vclxf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
 
