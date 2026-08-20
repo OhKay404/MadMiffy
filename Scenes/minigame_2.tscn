@@ -1,10 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0vc2vc60i6tp"]
+[gd_scene load_steps=10 format=3 uid="uid://c0vc2vc60i6tp"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_dfb65"]
 [ext_resource type="Script" uid="uid://c3kq15bu4jq2q" path="res://Scripts/minigame_2.gd" id="1_rfxq2"]
 [ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="2_rfxq2"]
 [ext_resource type="Script" uid="uid://dunljtxi5gjuv" path="res://Scripts/button_1.gd" id="3_mmgun"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="4_h684j"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="6_mmgun"]
+
+[sub_resource type="Animation" id="Animation_mmgun"]
+resource_name = "floating_directions"
+length = 2.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Directions:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4, 2.1, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(155, 46), Vector2(155, 53), Vector2(155, 46), Vector2(155, 53), Vector2(155, 46)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Directions:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.4, 1.8, 2.2, 2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.784314), Color(1, 1, 1, 0.584314), Color(1, 1, 1, 0.384314), Color(1, 1, 1, 0.184314), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h684j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Directions:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(155, 46)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Directions:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wu6l1"]
+_data = {
+&"RESET": SubResource("Animation_h684j"),
+&"floating_directions": SubResource("Animation_mmgun")
+}
 
 [node name="Minigame_2" type="Node2D"]
 script = ExtResource("1_rfxq2")
@@ -29,28 +92,28 @@ texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_2" type="TextureButton" parent="."]
-offset_left = 754.0
-offset_top = 112.0
-offset_right = 974.0
-offset_bottom = 318.0
+offset_left = 841.0
+offset_top = 127.0
+offset_right = 1061.0
+offset_bottom = 333.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_3" type="TextureButton" parent="."]
-offset_left = 621.0
-offset_top = 361.0
-offset_right = 841.0
-offset_bottom = 567.0
+offset_left = 657.0
+offset_top = 298.0
+offset_right = 877.0
+offset_bottom = 504.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_4" type="TextureButton" parent="."]
-offset_left = 431.0
-offset_top = 173.0
-offset_right = 651.0
-offset_bottom = 379.0
+offset_left = 419.0
+offset_top = 223.0
+offset_right = 639.0
+offset_bottom = 429.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
@@ -65,22 +128,43 @@ texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_6" type="TextureButton" parent="."]
-offset_left = 412.0
-offset_top = 466.0
-offset_right = 632.0
-offset_bottom = 672.0
+offset_left = 459.0
+offset_top = 471.0
+offset_right = 679.0
+offset_bottom = 677.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
 
 [node name="Button_7" type="TextureButton" parent="."]
-offset_left = 894.0
-offset_top = 340.0
-offset_right = 1114.0
-offset_bottom = 546.0
+offset_left = 899.0
+offset_top = 428.0
+offset_right = 1119.0
+offset_bottom = 634.0
 scale = Vector2(0.657582, 0.657582)
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
+
+[node name="Directions" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 155.0
+offset_top = 46.0
+offset_right = 909.0
+offset_bottom = 189.0
+theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/normal_font = ExtResource("6_mmgun")
+theme_override_font_sizes/normal_font_size = 70
+text = "Click all the hearts before the timer runs out!"
+horizontal_alignment = 1
+
+[node name="DirectionAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wu6l1")
+}
+autoplay = "floating_directions"
 
 [node name="ThemedTimer" parent="." instance=ExtResource("4_h684j")]
 position = Vector2(-5, -5)

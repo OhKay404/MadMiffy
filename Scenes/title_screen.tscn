@@ -105,9 +105,9 @@ texture = ExtResource("2_twnyg")
 [node name="Title" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 173.0
-offset_top = 122.0
+offset_top = 97.0
 offset_right = 751.0
-offset_bottom = 302.0
+offset_bottom = 277.0
 rotation = -4.59386e-05
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
