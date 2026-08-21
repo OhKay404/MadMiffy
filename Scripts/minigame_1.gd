@@ -18,6 +18,7 @@ func _ready() -> void:
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
 
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void: # running every frame brochacho
 	
 	if heart_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
