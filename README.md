@@ -18,3 +18,8 @@ Want to play? Play [MadMiffy on itch.io](https://ohkay404.itch.io/madmiffy "MadM
 1. Clone this repository.
 2. Import the project into Godot ver. 4.4.1.
 3. Click run project to start the game.
+
+## How it Works
+MadMiffy is a collection of minigames consisting of different mechanics depending on the minigame. To move the `Sprite2D` in minigame 1, the player relies on the left/right arrow keys to move, and the spacebar to jump. In minigame 2, the player clicks on each heart using the cursor.
+
+The game uses global variables `minigames_done` and `lives` to track the player's progress, and a `ThemedTimer` tracks the time remaining in each minigame. The player starts with 5 lives in the form of hearts, and loses a life each time the player runs out of time before completing a minigame. If the player fails a minigame, the minigame repeats until the player passes or runs out of lives.
