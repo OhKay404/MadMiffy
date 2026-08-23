@@ -13,3 +13,8 @@ Want to play? Play [MadMiffy on itch.io](https://ohkay404.itch.io/madmiffy "MadM
 - Timer Screen: Tracks the number of lives remaining and indicates the player's current level.
 - Winner Screen: Miffy floats away when the player wins.
 - Death Screen: Miffy descends when the player loses.
+
+## How to Run MadMiffy Locally
+1. Clone this repository.
+2. Import the project into Godot ver. 4.4.1.
+3. Click run project to start the game.
