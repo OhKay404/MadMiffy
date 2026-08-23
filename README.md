@@ -3,4 +3,4 @@
 
 ![til](./minigame1_demo.gif)
 
-## Play <a href="https://ohkay404.itch.io/madmiffy" target="_blank">MadMiffy</a> now!
+## Play [MadMiffy](https://ohkay404.itch.io/madmiffy "MadMiffy") now!
