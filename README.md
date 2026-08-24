@@ -8,7 +8,7 @@
 Want to play? Play [MadMiffy on itch.io](https://ohkay404.itch.io/madmiffy "MadMiffy") now!
 
 ## Features
-- 2D Platform Minigame: Collect all the hearts to pass.
+- 2D Platformer Minigame: Collect all the hearts to pass.
 - Clicker Minigame: Click all hearts using the cursor to pass.
 - Timer Screen: Tracks the number of lives remaining and indicates the player's current level.
 - Winner Screen: Miffy floats away when the player wins.
