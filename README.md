@@ -33,3 +33,6 @@ The game uses global variables `minigames_done` and `lives` to track the player'
 - Miffy Holding Teddy Bear: [CreatiefSimpel on Pinterest](https://www.pinterest.com/pin/666814288625883497/ "Pinterest")
 - Miffy Holding Balloons: [carlawolff1982 on Pinterest](https://www.pinterest.com/pin/666814288625883500/ "Pinterest")
 - Crying Miffy Face: [Pinterest](https://www.pinterest.com/pin/666814288625883499/ "Pinterest"), unknown creator
+
+## AI Usage
+- I used ChatGPT and Gemini to debug. When I did not understand what certain errors meant in my code, or when I needed to know certain syntax (e.g. parsing an integer as a string), I used AI to understand why the error occurred, how to approach the error, and how syntax was used. All code was implemented by me.
