@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://bv1ubjpgwt3ky"]
+[gd_scene load_steps=30 format=3 uid="uid://bv1ubjpgwt3ky"]
 
 [ext_resource type="Script" uid="uid://bjwdscdmr26mu" path="res://Scripts/minigame_1.gd" id="1_5txvl"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://k8ufb5xgrnoc" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://gxswmgltkwyx" path="res://Scripts/heart_collection.gd" id="3_o6yob"]
+[ext_resource type="Script" uid="uid://d1u87iwi0j1ux" path="res://Scripts/hearts_collected_tracker_1.gd" id="5_jmcek"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="6_0uv5o"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="7_ojqsy"]
 
@@ -63,7 +64,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.7, 1.4, 2.1, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(309, 89), Vector2(309, 96), Vector2(309, 89), Vector2(309, 96), Vector2(309, 89)]
+"values": [Vector2(305, 133), Vector2(305, 140), Vector2(305, 133), Vector2(305, 140), Vector2(305, 133)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -82,6 +83,44 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_btwg3"),
 &"floating_directions": SubResource("Animation_o14ck")
+}
+
+[sub_resource type="Animation" id="Animation_3yb6h"]
+resource_name = "position_tracker"
+length = 0.8
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(171, 28), Vector2(171, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_kllcc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(171, 27)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f12bx"]
+_data = {
+&"RESET": SubResource("Animation_kllcc"),
+&"position_tracker": SubResource("Animation_3yb6h")
 }
 
 [sub_resource type="Animation" id="Animation_ojqsy"]
@@ -213,6 +252,8 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.600026, 0.600063)
 texture = ExtResource("1_enoba")
+
+[node name="ThemedTimer" parent="." instance=ExtResource("6_0uv5o")]
 
 [node name="Platform1" type="StaticBody2D" parent="."]
 
@@ -363,11 +404,34 @@ theme_override_font_sizes/normal_font_size = 70
 text = "Collect the hearts before the timer runs out!"
 horizontal_alignment = 1
 
-[node name="DirectionAnimation" type="AnimationPlayer" parent="."]
+[node name="DirectionAnimation" type="AnimationPlayer" parent="Directions"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_btwg3")
 }
 autoplay = "floating_directions"
+
+[node name="HeartsCollectedTracker" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 171.0
+offset_top = 27.0
+offset_right = 656.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/normal_font = ExtResource("7_ojqsy")
+theme_override_font_sizes/normal_font_size = 60
+text = "Hearts: 0/3"
+vertical_alignment = 1
+script = ExtResource("5_jmcek")
+
+[node name="HeartsCollectedTrackerAnimation" type="AnimationPlayer" parent="HeartsCollectedTracker"]
+libraries = {
+&"": SubResource("AnimationLibrary_f12bx")
+}
+autoplay = "position_tracker"
 
 [node name="Player" parent="." instance=ExtResource("2_11mgy")]
 position = Vector2(118, 460)
@@ -442,8 +506,6 @@ autoplay = "float_heart3"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart3/Area2D"]
 position = Vector2(589, 341)
 shape = SubResource("CircleShape2D_0uv5o")
-
-[node name="ThemedTimer" parent="." instance=ExtResource("6_0uv5o")]
 
 [connection signal="heart_collected" from="Heart" to="." method="heart_collect"]
 [connection signal="heart_collected" from="Heart2" to="." method="heart_collect"]
