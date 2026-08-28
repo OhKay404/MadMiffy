@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=14 format=3 uid="uid://bs5y7eb74f6ra"]
 
 [ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
@@ -6,6 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://23376rdt0tr7" path="res://Images/MiffySettingsScreen.png" id="3_2kfxj"]
 [ext_resource type="Texture2D" uid="uid://tqqh7djnamxb" path="res://Images/HeartSlider.png" id="4_2gedn"]
 [ext_resource type="AudioStream" uid="uid://oo70daf34cv7" path="res://sound-of-waves-marine-drive-mumbai.mp3" id="4_ibs2t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li81v"]
+bg_color = Color(0.945098, 0.956863, 0.858824, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.411765, 0.462745, 0.207843, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="Animation" id="Animation_ibs2t"]
 length = 0.001
@@ -69,22 +81,30 @@ corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
-[node name="settings_Screen" type="Node2D"]
+[node name="settings_screen" type="Node2D"]
 scale = Vector2(0.99295, 0.988822)
 script = ExtResource("1_6giix")
 
-[node name="background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.604274, 0.606821)
 texture = ExtResource("1_amiku")
 
-[node name="settingsText" type="RichTextLabel" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(500, 450)
+offset_left = 324.286
+offset_top = 183.046
+offset_right = 824.286
+offset_bottom = 633.046
+theme_override_styles/panel = SubResource("StyleBoxFlat_li81v")
+
+[node name="SettingsText" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 351.0
-offset_top = 40.0
+offset_top = 27.8644
 offset_right = 807.0
-offset_bottom = 183.0
+offset_bottom = 170.864
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -92,6 +112,18 @@ theme_override_constants/outline_size = 28
 theme_override_fonts/normal_font = ExtResource("2_2kfxj")
 theme_override_font_sizes/normal_font_size = 140
 text = "Settings"
+
+[node name="VolumeText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 351.478
+offset_top = 544.082
+offset_right = 536.478
+offset_bottom = 628.082
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 65
+text = "Volume"
 
 [node name="miffy" type="TextureRect" parent="."]
 offset_left = 618.359
@@ -114,10 +146,10 @@ stream = ExtResource("4_ibs2t")
 autoplay = true
 
 [node name="VolumeAdjust" type="HSlider" parent="."]
-offset_left = 545.848
-offset_top = 472.279
-offset_right = 760.848
-offset_bottom = 525.279
+offset_left = 568.078
+offset_top = 554.0
+offset_right = 759.078
+offset_bottom = 607.0
 theme_override_icons/grabber = ExtResource("4_2gedn")
 theme_override_icons/grabber_highlight = ExtResource("4_2gedn")
 theme_override_styles/slider = SubResource("StyleBoxFlat_ibs2t")
