@@ -113,12 +113,74 @@ theme_override_fonts/normal_font = ExtResource("2_2kfxj")
 theme_override_font_sizes/normal_font_size = 140
 text = "Settings"
 
+[node name="ControlsText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 350.0
+offset_top = 195.0
+offset_right = 609.0
+offset_bottom = 279.0
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 77
+bbcode_enabled = true
+text = "[u]Controls[/u]"
+
+[node name="JumpText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 356.513
+offset_top = 266.181
+offset_right = 541.513
+offset_bottom = 350.181
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 65
+text = "Jump"
+
+[node name="MoveText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 356.513
+offset_top = 330.904
+offset_right = 541.513
+offset_bottom = 414.904
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 65
+text = "Move"
+
+[node name="MusicText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 349.993
+offset_top = 413.921
+offset_right = 541.993
+offset_bottom = 497.921
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 77
+bbcode_enabled = true
+text = "[u]Music[/u]"
+
+[node name="VolumeOnText" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 356.513
+offset_top = 485.426
+offset_right = 541.513
+offset_bottom = 569.426
+theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/normal_font = ExtResource("2_2kfxj")
+theme_override_font_sizes/normal_font_size = 65
+text = "On/Off"
+
 [node name="VolumeText" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 351.478
-offset_top = 544.082
-offset_right = 536.478
-offset_bottom = 628.082
+offset_left = 356.513
+offset_top = 542.059
+offset_right = 541.513
+offset_bottom = 626.059
 theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_fonts/normal_font = ExtResource("2_2kfxj")
@@ -146,10 +208,10 @@ stream = ExtResource("4_ibs2t")
 autoplay = true
 
 [node name="VolumeAdjust" type="HSlider" parent="."]
-offset_left = 568.078
-offset_top = 554.0
-offset_right = 759.078
-offset_bottom = 607.0
+offset_left = 576.135
+offset_top = 551.978
+offset_right = 767.135
+offset_bottom = 604.978
 theme_override_icons/grabber = ExtResource("4_2gedn")
 theme_override_icons/grabber_highlight = ExtResource("4_2gedn")
 theme_override_styles/slider = SubResource("StyleBoxFlat_ibs2t")
