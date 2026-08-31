@@ -141,6 +141,12 @@ theme_override_fonts/normal_font = ExtResource("2_2kfxj")
 theme_override_font_sizes/normal_font_size = 65
 text = "Jump"
 
+[node name="JumpDrop" type="OptionButton" parent="."]
+offset_left = 508.586
+offset_top = 287.21
+offset_right = 634.586
+offset_bottom = 316.21
+
 [node name="MoveText" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 356.513
@@ -176,7 +182,7 @@ theme_override_colors/default_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_colors/font_selected_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_fonts/normal_font = ExtResource("2_2kfxj")
 theme_override_font_sizes/normal_font_size = 65
-text = "On/Off"
+text = "Off"
 
 [node name="VolumeText" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -224,9 +230,9 @@ min_value = -25.0
 max_value = 0.0
 
 [node name="ToggleVolume" type="CheckButton" parent="."]
-offset_left = 531.749
+offset_left = 455.209
 offset_top = 491.494
-offset_right = 638.749
+offset_right = 562.209
 offset_bottom = 548.494
 theme_override_icons/checked = ExtResource("7_li81v")
 theme_override_icons/unchecked = ExtResource("8_elywa")
