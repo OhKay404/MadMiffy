@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=17 format=3 uid="uid://bs5y7eb74f6ra"]
 
 [ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://oo70daf34cv7" path="res://sound-of-waves-marine-drive-mumbai.mp3" id="4_ibs2t"]
 [ext_resource type="Texture2D" uid="uid://bwt68jjhotsnb" path="res://Images/toggle_on.png" id="7_li81v"]
 [ext_resource type="Texture2D" uid="uid://bowi4y47iuff6" path="res://Images/toggle_off.png" id="8_elywa"]
+[ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li81v"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -222,12 +223,14 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_6giix")
 min_value = -25.0
 max_value = 0.0
 
-[node name="CheckButton" type="CheckButton" parent="."]
+[node name="ToggleVolume" type="CheckButton" parent="."]
 offset_left = 531.749
 offset_top = 491.494
 offset_right = 638.749
 offset_bottom = 548.494
 theme_override_icons/checked = ExtResource("7_li81v")
 theme_override_icons/unchecked = ExtResource("8_elywa")
+script = ExtResource("9_dpiik")
 
 [connection signal="value_changed" from="VolumeAdjust" to="." method="_on_volume_adjust_value_changed"]
+[connection signal="toggled" from="ToggleVolume" to="." method="_on_toggle_volume_toggled"]
