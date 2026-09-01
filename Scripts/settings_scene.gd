@@ -22,3 +22,7 @@ func _on_toggle_volume_toggled(toggled_on: bool) -> void:
 	elif toggled_on:
 		$Test.stream_paused = false
 		$VolumeOnText.text = "On"
+
+
+func _on_home_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
