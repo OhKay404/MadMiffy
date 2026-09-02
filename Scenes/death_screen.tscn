@@ -144,6 +144,21 @@ _data = {
 &"RESET": SubResource("Animation_o6l62")
 }
 
+[sub_resource type="Animation" id="Animation_vb6s7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MiffyBalloon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(591, -527)]
+}
+
 [sub_resource type="Animation" id="Animation_amiou"]
 resource_name = "miffy_flying"
 length = 3.0
@@ -158,21 +173,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(591, -527), Vector2(728, -368), Vector2(647, -290), Vector2(765, -247), Vector2(656, -161), Vector2(766, -80), Vector2(709, 36)]
-}
-
-[sub_resource type="Animation" id="Animation_vb6s7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MiffyBalloon:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(591, -527)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tpvs2"]
@@ -212,6 +212,7 @@ offset_top = 416.0
 offset_right = 570.0
 offset_bottom = 491.0
 pivot_offset = Vector2(188, 39)
+mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)

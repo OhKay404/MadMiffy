@@ -14,5 +14,7 @@ func _process(delta: float) -> void:
 	if $JumpDrop:
 		if $JumpDrop.selected == 0:
 			$player_scene.JUMP_KEY = "ui_accept"
-		elif $JumpDrop.selected == "W Key":
-			$player_scene.gd.JUMP_KEY = "KEY_W"
+		elif $JumpDrop.selected == 1:
+			$player_scene.gd.JUMP_KEY = "jump_w"
+		elif $JumpDrop.selected == 2:
+			$player_scene.gd.JUMP_KEY = "ui_up"
