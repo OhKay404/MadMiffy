@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=22 format=3 uid="uid://bs5y7eb74f6ra"]
 
-[ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/settings_scene.gd" id="1_6giix"]
+[ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/SceneScripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_2kfxj"]
 [ext_resource type="Texture2D" uid="uid://23376rdt0tr7" path="res://Images/MiffySettingsScreen.png" id="3_2kfxj"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://oo70daf34cv7" path="res://sound-of-waves-marine-drive-mumbai.mp3" id="4_ibs2t"]
 [ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="5_h221s"]
 [ext_resource type="StyleBox" uid="uid://cgp48ikxadsuc" path="res://StyleBoxFlats/button_normal.tres" id="6_ye64u"]
+[ext_resource type="Script" uid="uid://d3c5x8e88psaw" path="res://Scripts/home_button.gd" id="7_h221s"]
 [ext_resource type="Texture2D" uid="uid://bwt68jjhotsnb" path="res://Images/toggle_on.png" id="7_li81v"]
 [ext_resource type="Texture2D" uid="uid://bowi4y47iuff6" path="res://Images/toggle_off.png" id="8_elywa"]
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
@@ -99,10 +100,10 @@ scale = Vector2(0.604274, 0.606821)
 texture = ExtResource("1_amiku")
 
 [node name="HomeButton" type="Button" parent="."]
-offset_left = 38.0
-offset_top = 26.0
-offset_right = 228.0
-offset_bottom = 106.0
+offset_left = 20.142
+offset_top = 21.2374
+offset_right = 317.142
+offset_bottom = 101.237
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
@@ -110,11 +111,12 @@ theme_override_colors/font_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_focus_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_fonts/font = ExtResource("2_2kfxj")
-theme_override_font_sizes/font_size = 65
+theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = ExtResource("4_3wso2")
 theme_override_styles/pressed = ExtResource("5_h221s")
 theme_override_styles/normal = ExtResource("6_ye64u")
-text = "Home"
+text = "Main Menu"
+script = ExtResource("7_h221s")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(500, 450)
@@ -127,9 +129,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_li81v")
 [node name="SettingsText" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 351.0
-offset_top = 27.8644
+offset_top = 35.9548
 offset_right = 807.0
-offset_bottom = 170.864
+offset_bottom = 178.954
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -264,6 +266,8 @@ theme_override_icons/checked = ExtResource("7_li81v")
 theme_override_icons/unchecked = ExtResource("8_elywa")
 script = ExtResource("9_dpiik")
 
+[connection signal="button_down" from="HomeButton" to="HomeButton" method="_on_button_down"]
+[connection signal="button_up" from="HomeButton" to="HomeButton" method="_on_button_up"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
 [connection signal="value_changed" from="VolumeAdjust" to="." method="_on_volume_adjust_value_changed"]
 [connection signal="toggled" from="ToggleVolume" to="." method="_on_toggle_volume_toggled"]

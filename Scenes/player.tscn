@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://k8ufb5xgrnoc"]
 
-[ext_resource type="Script" uid="uid://dp0oq0vget5tr" path="res://Scripts/player_scene.gd" id="1_7cibt"]
+[ext_resource type="Script" uid="uid://dp0oq0vget5tr" path="res://Scripts/SceneScripts/player_scene.gd" id="1_7cibt"]
 [ext_resource type="Texture2D" uid="uid://b67x17hmuqu58" path="res://Images/MiffySprite.png" id="1_8tj53"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]

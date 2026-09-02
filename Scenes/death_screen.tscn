@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dmrh5ejlotk83"]
 
-[ext_resource type="Script" uid="uid://bs3m63tygs781" path="res://Scripts/death_screen.gd" id="1_amiou"]
+[ext_resource type="Script" uid="uid://bs3m63tygs781" path="res://Scripts/SceneScripts/death_screen.gd" id="1_amiou"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="2_vb6s7"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="3_tpvs2"]
 [ext_resource type="Texture2D" uid="uid://cj8ynuy6iv78e" path="res://Images/MiffyDeathBalloon.png" id="4_amiou"]

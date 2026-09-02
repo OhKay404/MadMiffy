@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://c0vc2vc60i6tp"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_dfb65"]
-[ext_resource type="Script" uid="uid://c3kq15bu4jq2q" path="res://Scripts/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Script" uid="uid://c3kq15bu4jq2q" path="res://Scripts/SceneScripts/minigame_2.gd" id="1_rfxq2"]
 [ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="2_rfxq2"]
-[ext_resource type="Script" uid="uid://dunljtxi5gjuv" path="res://Scripts/button_1.gd" id="3_mmgun"]
+[ext_resource type="Script" uid="uid://dunljtxi5gjuv" path="res://Scripts/heart_buttons.gd" id="3_mmgun"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="4_h684j"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="6_mmgun"]
 [ext_resource type="Script" uid="uid://cpnmygdchjsm3" path="res://Scripts/hearts_clicked_tracker.gd" id="7_h684j"]

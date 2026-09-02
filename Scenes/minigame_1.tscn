@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://bv1ubjpgwt3ky"]
 
-[ext_resource type="Script" uid="uid://bjwdscdmr26mu" path="res://Scripts/minigame_1.gd" id="1_5txvl"]
+[ext_resource type="Script" uid="uid://bjwdscdmr26mu" path="res://Scripts/SceneScripts/minigame_1.gd" id="1_5txvl"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://k8ufb5xgrnoc" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="3_f6tb2"]

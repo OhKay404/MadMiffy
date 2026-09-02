@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://ku4iolk0m801"]
 
-[ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/winner_screen.gd" id="1_ncrrp"]
+[ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/SceneScripts/winner_screen.gd" id="1_ncrrp"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_30022"]
 [ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyWinnerBallon.png" id="4_b2loe"]

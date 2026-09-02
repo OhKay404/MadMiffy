@@ -1,11 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=17 format=3 uid="uid://cqa23eiocwyk8"]
 
-[ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/title_screen.gd" id="1_4gxqj"]
+[ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/SceneScripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://bujwf01md3nlp" path="res://Images/MadMiffyBackground_new.png" id="2_twnyg"]
 [ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_twnyg"]
 [ext_resource type="StyleBox" uid="uid://cilvx24a8hdq" path="res://StyleBoxFlats/button_hover.tres" id="5_12m1t"]
 [ext_resource type="StyleBox" uid="uid://cgp48ikxadsuc" path="res://StyleBoxFlats/button_normal.tres" id="6_6vd4x"]
+[ext_resource type="Script" uid="uid://00hb53p4uhwt" path="res://Scripts/start.gd" id="7_6vd4x"]
+[ext_resource type="Script" uid="uid://dhabx5scy0adh" path="res://Scripts/settings.gd" id="8_n82rj"]
+[ext_resource type="Script" uid="uid://c1m1eu0nyhsgl" path="res://Scripts/quit.gd" id="9_0061g"]
 
 [sub_resource type="Animation" id="Animation_twnyg"]
 length = 0.001
@@ -147,6 +150,7 @@ theme_override_styles/hover = ExtResource("5_12m1t")
 theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = ExtResource("6_6vd4x")
 text = "Start Game"
+script = ExtResource("7_6vd4x")
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -161,6 +165,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_12m1t")
 theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_55kwv")
 text = "Settings"
+script = ExtResource("8_n82rj")
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -175,10 +180,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_twnyg")
 theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4gxqj")
 text = "Quit"
+script = ExtResource("9_0061g")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
 
+[connection signal="button_down" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_start_button_down"]
+[connection signal="button_up" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_start_button_up"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="button_down" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_settings_button_down"]
+[connection signal="button_up" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_button_up"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="button_down" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_button_up"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

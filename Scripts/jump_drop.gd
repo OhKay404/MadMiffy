@@ -11,10 +11,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if $JumpDrop:
-		if $JumpDrop.selected == 0:
-			$player_scene.JUMP_KEY = "ui_accept"
-		elif $JumpDrop.selected == 1:
-			$player_scene.gd.JUMP_KEY = "jump_w"
-		elif $JumpDrop.selected == 2:
-			$player_scene.gd.JUMP_KEY = "ui_up"
+	pass
+	#if $JumpDrop:
+		#if $JumpDrop.selected == 0:
+			#$player_scene.JUMP_KEY = "ui_accept"
+		#elif $JumpDrop.selected == 1:
+			#$player_scene.gd.JUMP_KEY = "jump_w"
+		#elif $JumpDrop.selected == 2:
+			#$player_scene.gd.JUMP_KEY = "ui_up"
