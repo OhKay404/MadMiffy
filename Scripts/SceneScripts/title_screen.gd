@@ -13,17 +13,17 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	await wait(0.15)
+	await wait(0.12)
 	get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 
 func _on_settings_pressed() -> void:
-	await wait(0.15)
+	await wait(0.12)
 	get_tree().change_scene_to_file("res://Scenes/settings_scene.tscn")
 
 
 func _on_quit_pressed() -> void:
-	await wait(0.15)
+	await wait(0.12)
 	get_tree().quit()
 
 func wait(seconds: float) -> void: # write this simple function out for wait!

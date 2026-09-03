@@ -25,5 +25,5 @@ func _on_toggle_volume_toggled(toggled_on: bool) -> void:
 
 
 func _on_home_button_pressed() -> void:
-	await get_tree().create_timer(0.15).timeout
+	await get_tree().create_timer(0.12).timeout
 	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")

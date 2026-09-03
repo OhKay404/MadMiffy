@@ -135,8 +135,13 @@ offset_bottom = 588.0
 scale = Vector2(1.0025, 1)
 theme_override_constants/separation = 25
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Start" type="Button" parent="VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 345.0
+offset_bottom = 75.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
@@ -152,8 +157,14 @@ theme_override_styles/normal = ExtResource("6_6vd4x")
 text = "Start Game"
 script = ExtResource("7_6vd4x")
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
+[node name="Control2" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Settings" type="Button" parent="VBoxContainer/Control2"]
+layout_mode = 2
+offset_top = 75.0
+offset_right = 345.0
+offset_bottom = 150.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
@@ -167,8 +178,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_55kwv")
 text = "Settings"
 script = ExtResource("8_n82rj")
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Control3" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Quit" type="Button" parent="VBoxContainer/Control3"]
+layout_mode = 2
+offset_top = 150.0
+offset_right = 345.0
+offset_bottom = 225.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
@@ -185,12 +202,18 @@ script = ExtResource("9_0061g")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
 
-[connection signal="button_down" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_start_button_down"]
-[connection signal="button_up" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_start_button_up"]
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="button_down" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_settings_button_down"]
-[connection signal="button_up" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_button_up"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="button_down" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_button_down"]
-[connection signal="button_up" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_button_up"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="button_down" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_start_button_down"]
+[connection signal="button_up" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_start_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/Control/Start" to="." method="_on_start_pressed"]
+[connection signal="button_down" from="VBoxContainer/Control2/Settings" to="VBoxContainer/Control2/Settings" method="_on_settings_button_down"]
+[connection signal="button_up" from="VBoxContainer/Control2/Settings" to="VBoxContainer/Control2/Settings" method="_on_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Control2/Settings" to="VBoxContainer/Control2/Settings" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Control2/Settings" to="VBoxContainer/Control2/Settings" method="_on_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/Control2/Settings" to="." method="_on_settings_pressed"]
+[connection signal="button_down" from="VBoxContainer/Control3/Quit" to="VBoxContainer/Control3/Quit" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/Control3/Quit" to="VBoxContainer/Control3/Quit" method="_on_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Control3/Quit" to="VBoxContainer/Control3/Quit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Control3/Quit" to="VBoxContainer/Control3/Quit" method="_on_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/Control3/Quit" to="." method="_on_quit_pressed"]
