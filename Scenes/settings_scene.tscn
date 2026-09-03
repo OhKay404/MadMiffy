@@ -101,9 +101,9 @@ texture = ExtResource("1_amiku")
 
 [node name="HomeButton" type="Button" parent="."]
 offset_left = 20.142
-offset_top = 21.2374
+offset_top = 29.3278
 offset_right = 317.142
-offset_bottom = 101.237
+offset_bottom = 109.328
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.376471, 0.462745, 0.203922, 1)
 theme_override_colors/icon_normal_color = Color(0.376471, 0.462745, 0.203922, 1)
@@ -268,6 +268,8 @@ script = ExtResource("9_dpiik")
 
 [connection signal="button_down" from="HomeButton" to="HomeButton" method="_on_button_down"]
 [connection signal="button_up" from="HomeButton" to="HomeButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="HomeButton" to="HomeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HomeButton" to="HomeButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
 [connection signal="value_changed" from="VolumeAdjust" to="." method="_on_volume_adjust_value_changed"]
 [connection signal="toggled" from="ToggleVolume" to="." method="_on_toggle_volume_toggled"]
