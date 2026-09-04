@@ -7,7 +7,6 @@ func _ready() -> void:
 	add_item("Spacebar")
 	add_item("W Key")
 	add_item("Up Arrow Key")
-	select(0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

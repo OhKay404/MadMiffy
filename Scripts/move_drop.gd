@@ -5,8 +5,6 @@ extends OptionButton
 func _ready() -> void:
 	add_item("L/R Arrow Keys")
 	add_item("A/D Keys")
-	select(0)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
