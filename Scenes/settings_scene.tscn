@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=23 format=3 uid="uid://bs5y7eb74f6ra"]
 
 [ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/SceneScripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bwt68jjhotsnb" path="res://Images/toggle_on.png" id="7_li81v"]
 [ext_resource type="Texture2D" uid="uid://bowi4y47iuff6" path="res://Images/toggle_off.png" id="8_elywa"]
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
+[ext_resource type="Script" uid="uid://s45yub28utri" path="res://Scripts/move_drop.gd" id="9_ye64u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li81v"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -185,6 +186,13 @@ theme_override_fonts/normal_font = ExtResource("2_2kfxj")
 theme_override_font_sizes/normal_font_size = 65
 text = "Move"
 
+[node name="MoveDrop" type="OptionButton" parent="."]
+offset_left = 508.586
+offset_top = 348.989
+offset_right = 634.586
+offset_bottom = 377.989
+script = ExtResource("9_ye64u")
+
 [node name="MusicText" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 349.993
@@ -271,5 +279,7 @@ script = ExtResource("9_dpiik")
 [connection signal="mouse_entered" from="HomeButton" to="HomeButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HomeButton" to="HomeButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="item_selected" from="JumpDrop" to="JumpDrop" method="_on_item_selected"]
+[connection signal="item_selected" from="MoveDrop" to="MoveDrop" method="_on_item_selected"]
 [connection signal="value_changed" from="VolumeAdjust" to="." method="_on_volume_adjust_value_changed"]
 [connection signal="toggled" from="ToggleVolume" to="." method="_on_toggle_volume_toggled"]

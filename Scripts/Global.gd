@@ -2,6 +2,9 @@ extends Node
 
 var minigames_done = 0
 var lives = 5
+var JUMP_KEY = "ui_accept"
+var LEFT_KEY = "ui_left"
+var RIGHT_KEY = "ui_right"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

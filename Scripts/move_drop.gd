@@ -1,23 +1,21 @@
 extends OptionButton
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_item("Spacebar")
-	add_item("W Key")
-	add_item("Up Arrow Key")
+	add_item("L/R Arrow Keys")
+	add_item("A/D Keys")
 	select(0)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_item_selected(index: int) -> void:
-		if index == 0:
-			Global.JUMP_KEY = "ui_accept"
-		elif index == 1:
-			Global.JUMP_KEY = "w_key"
-		elif index == 2:
-			Global.JUMP_KEY = "ui_up"
+	if index == 0:
+		Global.LEFT_KEY = "ui_left"
+		Global.RIGHT_KEY = "ui_right"
+	elif index == 1:
+		Global.LEFT_KEY = "a_key"
+		Global.RIGHT_KEY = "d_key"
