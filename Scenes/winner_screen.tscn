@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://ku4iolk0m801"]
+[gd_scene load_steps=21 format=3 uid="uid://ku4iolk0m801"]
 
 [ext_resource type="Script" uid="uid://b0e0p86671rap" path="res://Scripts/SceneScripts/winner_screen.gd" id="1_ncrrp"]
 [ext_resource type="Texture2D" uid="uid://bcbbcxoigyspx" path="res://Images/MadMiffyWinnerDeathBackground.png" id="1_whwiw"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_30022"]
 [ext_resource type="Texture2D" uid="uid://xywyajpmiv2l" path="res://Images/MiffyWinnerBallon.png" id="4_b2loe"]
 [ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_vclxf"]
+[ext_resource type="Script" uid="uid://bxymcc6i80utu" path="res://Scripts/win_button.gd" id="5_emq8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncrrp"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -89,7 +90,7 @@ length = 0.5
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("../Button:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
@@ -222,6 +223,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ncrrp")
 theme_override_styles/pressed = ExtResource("4_vclxf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b2loe")
 text = "Main Menu"
+script = ExtResource("5_emq8g")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 733.0
@@ -257,4 +259,6 @@ libraries = {
 }
 autoplay = "miffy_flying"
 
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
