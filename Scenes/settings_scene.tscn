@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=27 format=3 uid="uid://bs5y7eb74f6ra"]
 
 [ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/SceneScripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
@@ -12,7 +12,10 @@
 [ext_resource type="StyleBox" uid="uid://cgp48ikxadsuc" path="res://StyleBoxFlats/button_normal.tres" id="6_ye64u"]
 [ext_resource type="Script" uid="uid://d3c5x8e88psaw" path="res://Scripts/home_button.gd" id="7_h221s"]
 [ext_resource type="Texture2D" uid="uid://bwt68jjhotsnb" path="res://Images/toggle_on.png" id="7_li81v"]
+[ext_resource type="StyleBox" uid="uid://bqws07x7hi5cd" path="res://StyleBoxFlats/dropdown_hover.tres" id="8_2r5g8"]
+[ext_resource type="StyleBox" uid="uid://dquayf3nvnmh4" path="res://StyleBoxFlats/dropdown_normal.tres" id="8_221nc"]
 [ext_resource type="Texture2D" uid="uid://bowi4y47iuff6" path="res://Images/toggle_off.png" id="8_elywa"]
+[ext_resource type="Texture2D" uid="uid://coh535wwpkmk1" path="res://Images/dropdown_arrow.png" id="9_061es"]
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
 [ext_resource type="Script" uid="uid://s45yub28utri" path="res://Scripts/move_drop.gd" id="9_ye64u"]
 
@@ -27,6 +30,18 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r5g8"]
+bg_color = Color(0.909804, 0.92549, 0.8, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.411765, 0.462745, 0.207843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="Animation" id="Animation_ibs2t"]
 length = 0.001
@@ -168,10 +183,20 @@ text = "Jump"
 
 [node name="JumpDrop" type="OptionButton" parent="."]
 offset_left = 508.586
-offset_top = 287.21
-offset_right = 634.586
-offset_bottom = 316.21
+offset_top = 284.176
+offset_right = 682.586
+offset_bottom = 313.176
 mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_focus_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_pressed_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/font = ExtResource("2_2kfxj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("8_2r5g8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2r5g8")
+theme_override_styles/normal = ExtResource("8_221nc")
+theme_override_icons/arrow = ExtResource("9_061es")
+alignment = 1
 script = ExtResource("4_0k35h")
 
 [node name="MoveText" type="RichTextLabel" parent="."]
@@ -187,10 +212,19 @@ theme_override_font_sizes/normal_font_size = 65
 text = "Move"
 
 [node name="MoveDrop" type="OptionButton" parent="."]
-offset_left = 508.586
-offset_top = 348.989
-offset_right = 634.586
-offset_bottom = 377.989
+offset_left = 509.0
+offset_top = 349.0
+offset_right = 683.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_focus_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_colors/font_pressed_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_fonts/font = ExtResource("2_2kfxj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("8_2r5g8")
+theme_override_styles/normal = ExtResource("8_221nc")
+theme_override_icons/arrow = ExtResource("9_061es")
+alignment = 1
 script = ExtResource("9_ye64u")
 
 [node name="MusicText" type="RichTextLabel" parent="."]
