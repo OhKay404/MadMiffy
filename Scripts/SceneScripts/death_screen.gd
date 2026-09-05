@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	await get_tree().create_timer(0.11).timeout
 	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 	Global.lives = 5
 	Global.minigames_done = 0
