@@ -4,8 +4,8 @@ extends Node2D
 
 
 
-var heart_collected = 0 # just keeping track of garlic collected
-var timer_end = false # boolean (true or false) stating whether the timer ended
+var heart_collected:int = 0 # just keeping track of garlic collected
+var timer_end:bool = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
 

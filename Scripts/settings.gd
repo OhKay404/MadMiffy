@@ -1,7 +1,7 @@
 extends Button
 
 var tween:Tween
-@onready var original_Y = position.y
+var original_Y:float = position.y
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

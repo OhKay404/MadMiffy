@@ -1,8 +1,8 @@
 extends Node2D
 @onready var themed_timer: Node2D = $ThemedTimer
 
-var buttons_pressed := 0
-var timer_end = false
+var buttons_pressed:int = 0
+var timer_end:bool = false
 
 func _ready() -> void:
 	await themed_timer.Timer(5.5)
