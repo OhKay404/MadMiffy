@@ -391,10 +391,10 @@ shape = SubResource("RectangleShape2D_chyva")
 
 [node name="Directions" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 309.0
-offset_top = 89.0
-offset_right = 986.0
-offset_bottom = 284.0
+offset_left = 305.0
+offset_top = 133.0
+offset_right = 982.0
+offset_bottom = 328.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -414,9 +414,9 @@ autoplay = "floating_directions"
 [node name="HeartsCollectedTracker" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 171.0
-offset_top = 27.0
+offset_top = 27.9365
 offset_right = 656.0
-offset_bottom = 98.0
+offset_bottom = 98.9365
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
