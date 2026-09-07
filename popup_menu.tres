@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b5vwtq3c6i5m7"]
+
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="1_32dbj"]
+[ext_resource type="Texture2D" uid="uid://coh535wwpkmk1" path="res://Images/dropdown_arrow.png" id="2_c765a"]
+[ext_resource type="StyleBox" uid="uid://bqtnk6ypjtvuw" path="res://StyleBoxFlats/popup_hover.tres" id="3_kyi3x"]
+[ext_resource type="StyleBox" uid="uid://cmcclcjt7ygy3" path="res://StyleBoxFlats/popup_panel.tres" id="4_h4tih"]
+
+[resource]
+PopupMenu/colors/font_color = Color(0.411765, 0.462745, 0.207843, 1)
+PopupMenu/colors/font_hover_color = Color(0.945098, 0.956863, 0.858824, 1)
+PopupMenu/font_sizes/font_size = 25
+PopupMenu/fonts/font = ExtResource("1_32dbj")
+PopupMenu/icons/radio_checked = ExtResource("2_c765a")
+PopupMenu/styles/hover = ExtResource("3_kyi3x")
+PopupMenu/styles/panel = ExtResource("4_h4tih")

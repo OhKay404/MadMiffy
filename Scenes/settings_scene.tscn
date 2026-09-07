@@ -15,6 +15,7 @@
 [ext_resource type="StyleBox" uid="uid://bqws07x7hi5cd" path="res://StyleBoxFlats/dropdown_hover.tres" id="8_2r5g8"]
 [ext_resource type="StyleBox" uid="uid://dquayf3nvnmh4" path="res://StyleBoxFlats/dropdown_normal.tres" id="8_221nc"]
 [ext_resource type="Texture2D" uid="uid://bowi4y47iuff6" path="res://Images/toggle_off.png" id="8_elywa"]
+[ext_resource type="Theme" uid="uid://b5vwtq3c6i5m7" path="res://popup_menu.tres" id="8_qwaxv"]
 [ext_resource type="Texture2D" uid="uid://coh535wwpkmk1" path="res://Images/dropdown_arrow.png" id="9_061es"]
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
 [ext_resource type="StyleBox" uid="uid://cpo48bxtl402y" path="res://StyleBoxFlats/dropdown_pressed.tres" id="9_qw1nj"]
@@ -31,11 +32,6 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
-
-[sub_resource type="Theme" id="Theme_qw1nj"]
-PopupMenu/font_sizes/font_size = 25
-PopupMenu/fonts/font = ExtResource("2_2kfxj")
-PopupMenu/icons/radio_checked = ExtResource("9_061es")
 
 [sub_resource type="Animation" id="Animation_ibs2t"]
 length = 0.001
@@ -176,12 +172,12 @@ theme_override_font_sizes/normal_font_size = 65
 text = "Jump"
 
 [node name="JumpDrop" type="OptionButton" parent="."]
-offset_left = 508.586
-offset_top = 284.176
-offset_right = 682.586
-offset_bottom = 313.176
+offset_left = 511.607
+offset_top = 281.143
+offset_right = 685.607
+offset_bottom = 310.143
 mouse_default_cursor_shape = 2
-theme = SubResource("Theme_qw1nj")
+theme = ExtResource("8_qwaxv")
 theme_override_colors/font_hover_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -210,10 +206,11 @@ theme_override_font_sizes/normal_font_size = 65
 text = "Move"
 
 [node name="MoveDrop" type="OptionButton" parent="."]
-offset_left = 509.0
-offset_top = 349.0
-offset_right = 683.0
-offset_bottom = 378.0
+offset_left = 512.614
+offset_top = 348.9
+offset_right = 686.614
+offset_bottom = 377.9
+theme = ExtResource("8_qwaxv")
 theme_override_colors/font_hover_pressed_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_color = Color(0.411765, 0.462745, 0.207843, 1)
