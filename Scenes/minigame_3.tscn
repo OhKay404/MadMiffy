@@ -1,13 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=9 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
+[ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scenes/minigame_3.gd" id="1_y6mal"]
+[ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_ihkhm"]
+[ext_resource type="Script" uid="uid://c3s2xaou14y3x" path="res://Scenes/bubble_food.gd" id="3_we0jk"]
+[ext_resource type="Texture2D" uid="uid://pjkp6rniik65" path="res://Images/Food1.png" id="4_4cfv6"]
+[ext_resource type="Texture2D" uid="uid://bsu2ob2gwb7jv" path="res://Images/Food2.png" id="5_mu65p"]
+[ext_resource type="Texture2D" uid="uid://b85hu1v6ocl40" path="res://Images/Food3.png" id="6_s0j2t"]
+[ext_resource type="Texture2D" uid="uid://xtmif3h0y6np" path="res://Images/Food4.png" id="7_5plo5"]
 
 [node name="Minigame_3" type="Node2D"]
+script = ExtResource("1_y6mal")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 433.0
-offset_top = 115.0
-offset_right = 855.0
-offset_bottom = 738.0
+[node name="Miffy" type="TextureRect" parent="."]
+offset_left = 449.0
+offset_top = 97.0
+offset_right = 871.0
+offset_bottom = 720.0
 scale = Vector2(0.568962, 0.568962)
 texture = ExtResource("1_asmx3")
+
+[node name="Table" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_top = 382.0
+offset_right = 1177.0
+offset_bottom = 672.0
+texture = ExtResource("2_ihkhm")
+
+[node name="Food1" type="TextureRect" parent="."]
+offset_left = 264.0
+offset_top = 397.0
+offset_right = 693.0
+offset_bottom = 831.0
+scale = Vector2(0.281921, 0.229682)
+texture = ExtResource("4_4cfv6")
+
+[node name="Food2" type="TextureRect" parent="."]
+offset_left = 427.0
+offset_top = 400.0
+offset_right = 607.0
+offset_bottom = 580.0
+scale = Vector2(0.610604, 0.569211)
+texture = ExtResource("5_mu65p")
+
+[node name="Food3" type="TextureRect" parent="."]
+offset_left = 589.0
+offset_top = 400.0
+offset_right = 769.0
+offset_bottom = 580.0
+scale = Vector2(0.512874, 0.450603)
+texture = ExtResource("6_s0j2t")
+
+[node name="Food4" type="TextureRect" parent="."]
+offset_left = 741.0
+offset_top = 402.0
+offset_right = 921.0
+offset_bottom = 582.0
+scale = Vector2(0.160868, 0.120319)
+texture = ExtResource("7_5plo5")
+
+[node name="SpeechBubble" type="TextureRect" parent="."]
+offset_left = 680.0
+offset_top = 66.0
+offset_right = 860.0
+offset_bottom = 246.0
+texture = ExtResource("2_ihkhm")
+
+[node name="BubbleFood" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 721.0
+offset_top = 111.0
+offset_right = 901.0
+offset_bottom = 291.0
+scale = Vector2(0.536127, 0.503132)
+script = ExtResource("3_we0jk")
