@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=11 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c3s2xaou14y3x" path="res://Scripts/bubble_food.gd" id="3_we0jk"]
 [ext_resource type="Texture2D" uid="uid://pjkp6rniik65" path="res://Images/Food1.png" id="4_4cfv6"]
 [ext_resource type="Texture2D" uid="uid://bsu2ob2gwb7jv" path="res://Images/Food2.png" id="5_mu65p"]
+[ext_resource type="Script" uid="uid://c5lirgfwjc1d4" path="res://Scripts/food_1.gd" id="5_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://b85hu1v6ocl40" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://xtmif3h0y6np" path="res://Images/Food4.png" id="7_5plo5"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="9_4cfv6"]
@@ -28,13 +29,14 @@ offset_right = 1177.0
 offset_bottom = 672.0
 texture = ExtResource("2_ihkhm")
 
-[node name="Food1" type="TextureRect" parent="."]
-offset_left = 264.0
-offset_top = 397.0
-offset_right = 693.0
-offset_bottom = 831.0
-scale = Vector2(0.281921, 0.229682)
-texture = ExtResource("4_4cfv6")
+[node name="Food1" type="TextureButton" parent="."]
+offset_left = 282.0
+offset_top = 399.0
+offset_right = 711.0
+offset_bottom = 833.0
+scale = Vector2(0.214671, 0.216227)
+texture_normal = ExtResource("4_4cfv6")
+script = ExtResource("5_s0j2t")
 
 [node name="Food2" type="TextureRect" parent="."]
 offset_left = 427.0
@@ -77,3 +79,5 @@ scale = Vector2(0.536127, 0.503132)
 script = ExtResource("3_we0jk")
 
 [node name="ThemedTimer" parent="." instance=ExtResource("9_4cfv6")]
+
+[connection signal="pressed" from="Food1" to="Food1" method="_on_pressed"]
