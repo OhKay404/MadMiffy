@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bujwf01md3nlp"
-path="res://.godot/imported/MadMiffyBackground_new.png-291813fe640bb96d109e4d25bbced910.ctex"
+uid="uid://biraf6t0kkoga"
+path="res://.godot/imported/MadMiffyBackground.png-5bb9b9439a97f3e0a568dd9a090a637a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/MadMiffyBackground_new.png"
-dest_files=["res://.godot/imported/MadMiffyBackground_new.png-291813fe640bb96d109e4d25bbced910.ctex"]
+source_file="res://Images/MadMiffyBackground.png"
+dest_files=["res://.godot/imported/MadMiffyBackground.png-5bb9b9439a97f3e0a568dd9a090a637a.ctex"]
 
 [params]
 

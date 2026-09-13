@@ -1,14 +1,52 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=21 format=3 uid="uid://cqa23eiocwyk8"]
 
 [ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/SceneScripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
-[ext_resource type="Texture2D" uid="uid://bujwf01md3nlp" path="res://Images/MadMiffyBackground_new.png" id="2_twnyg"]
+[ext_resource type="Texture2D" uid="uid://biraf6t0kkoga" path="res://Images/MadMiffyBackground.png" id="2_8mikk"]
+[ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="3_sqelc"]
 [ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="4_twnyg"]
 [ext_resource type="StyleBox" uid="uid://cilvx24a8hdq" path="res://StyleBoxFlats/button_hover.tres" id="5_12m1t"]
 [ext_resource type="StyleBox" uid="uid://cgp48ikxadsuc" path="res://StyleBoxFlats/button_normal.tres" id="6_6vd4x"]
 [ext_resource type="Script" uid="uid://00hb53p4uhwt" path="res://Scripts/start.gd" id="7_6vd4x"]
 [ext_resource type="Script" uid="uid://dhabx5scy0adh" path="res://Scripts/settings.gd" id="8_n82rj"]
 [ext_resource type="Script" uid="uid://c1m1eu0nyhsgl" path="res://Scripts/quit.gd" id="9_0061g"]
+
+[sub_resource type="Animation" id="Animation_8mikk"]
+resource_name = "MovingMiffy"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0523599, -0.0523599]
+}
+
+[sub_resource type="Animation" id="Animation_sqelc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w5sh6"]
+_data = {
+&"MovingMiffy": SubResource("Animation_8mikk"),
+&"RESET": SubResource("Animation_sqelc")
+}
 
 [sub_resource type="Animation" id="Animation_twnyg"]
 length = 0.001
@@ -103,7 +141,23 @@ script = ExtResource("1_4gxqj")
 offset_right = 1928.0
 offset_bottom = 1088.0
 scale = Vector2(0.59759, 0.595758)
-texture = ExtResource("2_twnyg")
+texture = ExtResource("2_8mikk")
+
+[node name="Miffy" type="TextureRect" parent="."]
+offset_left = 701.0
+offset_top = 60.0
+offset_right = 1123.0
+offset_bottom = 683.0
+rotation = 0.0872665
+scale = Vector2(0.679648, 0.679648)
+pivot_offset = Vector2(232.473, 407.564)
+texture = ExtResource("3_sqelc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Miffy"]
+libraries = {
+&"": SubResource("AnimationLibrary_w5sh6")
+}
+autoplay = "MovingMiffy"
 
 [node name="Title" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -120,8 +174,7 @@ theme_override_fonts/normal_font = ExtResource("2_4gxqj")
 theme_override_font_sizes/normal_font_size = 165
 text = "MadMiffy"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Title")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
 libraries = {
 &"": SubResource("AnimationLibrary_twnyg")
 }

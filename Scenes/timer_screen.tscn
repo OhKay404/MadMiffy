@@ -1,18 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://cybggljo6l5c7"]
+[gd_scene load_steps=9 format=3 uid="uid://cybggljo6l5c7"]
 
 [ext_resource type="Script" uid="uid://coxn88qhxjmci" path="res://Scripts/SceneScripts/timer_screen.gd" id="1_ry0ke"]
-[ext_resource type="Texture2D" uid="uid://bujwf01md3nlp" path="res://Images/MadMiffyBackground_new.png" id="2_ry0ke"]
+[ext_resource type="Texture2D" uid="uid://biraf6t0kkoga" path="res://Images/MadMiffyBackground.png" id="2_tsv7m"]
+[ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="3_cqi0v"]
 [ext_resource type="Texture2D" uid="uid://xrmoia2au82d" path="res://Images/Heart.png" id="3_tpp86"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="4_cqi0v"]
+
+[sub_resource type="Animation" id="Animation_8mikk"]
+resource_name = "MovingMiffy"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0523599, -0.0523599]
+}
+
+[sub_resource type="Animation" id="Animation_sqelc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w5sh6"]
+_data = {
+&"MovingMiffy": SubResource("Animation_8mikk"),
+&"RESET": SubResource("Animation_sqelc")
+}
 
 [node name="TimerScreen" type="Node2D"]
 script = ExtResource("1_ry0ke")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+offset_top = 1.0
 offset_right = 1920.0
-offset_bottom = 1080.0
-scale = Vector2(0.600014, 0.600041)
-texture = ExtResource("2_ry0ke")
+offset_bottom = 1081.0
+scale = Vector2(0.600058, 0.600041)
+texture = ExtResource("2_tsv7m")
+
+[node name="Miffy" type="TextureRect" parent="."]
+offset_left = 699.0
+offset_top = 61.0
+offset_right = 1121.0
+offset_bottom = 684.0
+rotation = 0.0872665
+scale = Vector2(0.679648, 0.679648)
+pivot_offset = Vector2(232.473, 407.564)
+texture = ExtResource("3_cqi0v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Miffy"]
+libraries = {
+&"": SubResource("AnimationLibrary_w5sh6")
+}
+autoplay = "MovingMiffy"
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 offset_left = 66.0
