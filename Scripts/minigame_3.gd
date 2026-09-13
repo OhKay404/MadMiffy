@@ -34,6 +34,13 @@ func _on_food_1_pressed() -> void:
 				get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 			else:
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 
 
@@ -50,7 +57,13 @@ func _on_food_2_pressed() -> void:
 				get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 			else:
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
-
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 func _on_food_3_pressed() -> void:
 	if bubble_food.texture.resource_path == "res://Images/Food3.png":
@@ -65,7 +78,13 @@ func _on_food_3_pressed() -> void:
 				get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 			else:
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
-
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 func _on_food_4_pressed() -> void:
 	if bubble_food.texture.resource_path == "res://Images/Food4.png":
@@ -80,3 +99,10 @@ func _on_food_4_pressed() -> void:
 				get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 			else:
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
