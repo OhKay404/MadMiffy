@@ -54,9 +54,9 @@ scale = Vector2(0.600058, 0.600041)
 texture = ExtResource("2_tsv7m")
 
 [node name="Miffy" type="TextureRect" parent="."]
-offset_left = 699.0
+offset_left = 698.0
 offset_top = 61.0
-offset_right = 1121.0
+offset_right = 1120.0
 offset_bottom = 684.0
 rotation = 0.0872665
 scale = Vector2(0.679648, 0.679648)
