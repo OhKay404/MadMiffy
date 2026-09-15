@@ -1,5 +1,6 @@
 extends Node2D
 
+var num_clicked:int = 0
 var mouse_position:Vector2 = get_global_mouse_position()
 var timer_end:bool = false
 @onready var themed_timer: Node2D = $ThemedTimer
@@ -16,24 +17,25 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if timer_end:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 
 
 
 func _on_food_1_pressed() -> void:
 	if bubble_food.texture.resource_path == "res://Images/Food1.png":
-		if Global.minigames_done == 3:
-			get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
-		else:
-				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
-		if timer_end:
-			Global.lives -= 1
-			Global.minigames_done -=1
-			if Global.lives < 1:
-				get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		num_clicked += 1
+		if num_clicked == 3:
+			if Global.minigames_done == 3:
+				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
-				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+					get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 	else:
 		Global.lives -= 1
 		Global.minigames_done -=1
