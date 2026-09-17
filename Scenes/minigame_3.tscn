@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=13 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b85hu1v6ocl40" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://xtmif3h0y6np" path="res://Images/Food4.png" id="7_5plo5"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="9_4cfv6"]
+[ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="11_5plo5"]
+[ext_resource type="Script" uid="uid://sjw3fl4pvo4w" path="res://Scripts/food_served.gd" id="12_1kvof"]
 
 [node name="Minigame_3" type="Node2D"]
 script = ExtResource("1_y6mal")
@@ -85,6 +87,21 @@ texture_normal = ExtResource("7_5plo5")
 
 [node name="ThemedTimer" parent="." instance=ExtResource("9_4cfv6")]
 position = Vector2(-1, 0)
+
+[node name="FoodServed" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 171.0
+offset_top = 35.0
+offset_right = 574.0
+offset_bottom = 127.0
+theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/normal_font = ExtResource("11_5plo5")
+theme_override_font_sizes/normal_font_size = 60
+text = "Food Served: 0/3"
+script = ExtResource("12_1kvof")
 
 [connection signal="pressed" from="Food1" to="." method="_on_food_1_pressed"]
 [connection signal="pressed" from="Food2" to="." method="_on_food_2_pressed"]
