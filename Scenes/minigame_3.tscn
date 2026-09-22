@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://biraf6t0kkoga" path="res://Images/MadMiffyBackground.png" id="2_5plo5"]
 [ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_ihkhm"]
 [ext_resource type="Texture2D" uid="uid://y8u7vb4an88n" path="res://Images/Food1.png" id="4_4cfv6"]
-[ext_resource type="Texture2D" uid="uid://b1i28x41s51xb" path="res://Images/table.png" id="4_f07lr"]
+[ext_resource type="Texture2D" uid="uid://b1i28x41s51xb" path="res://Images/Table.png" id="4_f07lr"]
 [ext_resource type="Texture2D" uid="uid://ce5a2yts5cj2t" path="res://Images/Food2.png" id="5_mu65p"]
 [ext_resource type="Texture2D" uid="uid://jr6sfy6gxal2" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://ctvx46d7pmskx" path="res://Images/Food4.png" id="7_5plo5"]

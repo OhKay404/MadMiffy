@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1i28x41s51xb"
-path="res://.godot/imported/Table.png-7cc9059aecfc8a3074740eb06ba6acf1.ctex"
+uid="uid://bwt68jjhotsnb"
+path="res://.godot/imported/ToggleOn.png-7aa1f0ddfc36747091fa18bd65f972db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Table.png"
-dest_files=["res://.godot/imported/Table.png-7cc9059aecfc8a3074740eb06ba6acf1.ctex"]
+source_file="res://Images/ToggleOn.png"
+dest_files=["res://.godot/imported/ToggleOn.png-7aa1f0ddfc36747091fa18bd65f972db.ctex"]
 
 [params]
 

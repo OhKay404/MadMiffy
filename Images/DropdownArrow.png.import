@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwt68jjhotsnb"
-path="res://.godot/imported/toggle_on.png-14a6b25da775688902c0dcbdaffee101.ctex"
+uid="uid://coh535wwpkmk1"
+path="res://.godot/imported/DropdownArrow.png-77096ed096b7f9e986f0527bee975114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/toggle_on.png"
-dest_files=["res://.godot/imported/toggle_on.png-14a6b25da775688902c0dcbdaffee101.ctex"]
+source_file="res://Images/DropdownArrow.png"
+dest_files=["res://.godot/imported/DropdownArrow.png-77096ed096b7f9e986f0527bee975114.ctex"]
 
 [params]
 
