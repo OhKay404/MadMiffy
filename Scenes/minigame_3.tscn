@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=21 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
-[ext_resource type="Texture2D" uid="uid://biraf6t0kkoga" path="res://Images/MadMiffyBackground.png" id="2_5plo5"]
-[ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_ihkhm"]
+[ext_resource type="Texture2D" uid="uid://cvv3fnyalgwj8" path="res://Images/Minigame3Background.png" id="2_f07lr"]
 [ext_resource type="Texture2D" uid="uid://y8u7vb4an88n" path="res://Images/Food1.png" id="4_4cfv6"]
 [ext_resource type="Texture2D" uid="uid://b1i28x41s51xb" path="res://Images/Table.png" id="4_f07lr"]
+[ext_resource type="Texture2D" uid="uid://cqbo55owj78mx" path="res://Images/SpeechBubble.png" id="5_f07lr"]
 [ext_resource type="Texture2D" uid="uid://ce5a2yts5cj2t" path="res://Images/Food2.png" id="5_mu65p"]
+[ext_resource type="Texture2D" uid="uid://b1etomoyij655" path="res://Images/QuestionMark.png" id="6_kvuqf"]
 [ext_resource type="Texture2D" uid="uid://jr6sfy6gxal2" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://ctvx46d7pmskx" path="res://Images/Food4.png" id="7_5plo5"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="9_4cfv6"]
@@ -17,26 +18,52 @@
 [ext_resource type="Script" uid="uid://c7v442vauk0ro" path="res://Scripts/bubble_3.gd" id="15_75k32"]
 [ext_resource type="Script" uid="uid://cn85o0son2exk" path="res://Scripts/bubble_4.gd" id="16_f07lr"]
 
+[sub_resource type="Animation" id="Animation_o2tgi"]
+resource_name = "RotateQuestionMark"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuestionMark:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0763706, -0.0732259]
+}
+
+[sub_resource type="Animation" id="Animation_fsk5v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuestionMark:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0763706]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8c48"]
+_data = {
+&"RESET": SubResource("Animation_fsk5v"),
+&"RotateQuestionMark": SubResource("Animation_o2tgi")
+}
+
 [node name="Minigame_3" type="Node2D"]
 script = ExtResource("1_y6mal")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_left = 632.0
-offset_top = -691.0
-offset_right = 2552.0
-offset_bottom = 389.0
-rotation = 1.5708
-scale = Vector2(0.600491, 0.600051)
-texture = ExtResource("2_5plo5")
-
-[node name="Background2" type="TextureRect" parent="."]
-offset_left = 1159.0
-offset_top = -691.0
-offset_right = 3079.0
-offset_bottom = 389.0
-rotation = 1.5708
-scale = Vector2(0.600491, 0.600051)
-texture = ExtResource("2_5plo5")
+offset_top = -126.0
+offset_right = 1920.0
+offset_bottom = 886.0
+scale = Vector2(0.60002, 0.592489)
+texture = ExtResource("2_f07lr")
 
 [node name="Miffy" type="TextureRect" parent="."]
 offset_left = 449.0
@@ -55,11 +82,12 @@ scale = Vector2(0.9274, 0.9274)
 texture = ExtResource("4_f07lr")
 
 [node name="SpeechBubble" type="TextureRect" parent="."]
-offset_left = 680.0
-offset_top = 66.0
-offset_right = 860.0
-offset_bottom = 246.0
-texture = ExtResource("2_ihkhm")
+offset_left = 681.0
+offset_top = 40.0
+offset_right = 1308.0
+offset_bottom = 539.0
+scale = Vector2(0.414882, 0.414882)
+texture = ExtResource("5_f07lr")
 
 [node name="Food1" type="TextureButton" parent="."]
 offset_left = 158.0
@@ -103,56 +131,77 @@ texture_normal = ExtResource("7_5plo5")
 clip_contents = false
 offset_left = 174.0
 offset_top = 36.0
-offset_right = 577.0
+offset_right = 591.0
 offset_bottom = 128.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_constants/outline_size = 17
 theme_override_fonts/normal_font = ExtResource("11_5plo5")
-theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/normal_font_size = 65
 text = "Food Served: 0/3"
 script = ExtResource("12_1kvof")
 
 [node name="Bubble1" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 691.0
-offset_top = 124.0
-offset_right = 1383.0
-offset_bottom = 428.0
-scale = Vector2(0.227352, 0.227352)
+offset_left = 717.0
+offset_top = 81.0
+offset_right = 1409.0
+offset_bottom = 385.0
+rotation = 0.0835666
+scale = Vector2(0.287223, 0.287223)
 texture = ExtResource("4_4cfv6")
 script = ExtResource("13_1kvof")
 
 [node name="Bubble2" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 696.0
-offset_top = 92.0
-offset_right = 1287.0
-offset_bottom = 601.0
-scale = Vector2(0.241461, 0.241461)
+offset_left = 738.0
+offset_top = 58.0
+offset_right = 1329.0
+offset_bottom = 567.0
+rotation = 0.104337
+scale = Vector2(0.271535, 0.271535)
 texture = ExtResource("5_mu65p")
 script = ExtResource("14_7u6rh")
 
 [node name="Bubble3" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 695.0
-offset_top = 102.0
-offset_right = 1304.0
-offset_bottom = 532.0
-scale = Vector2(0.251721, 0.251721)
+offset_left = 731.0
+offset_top = 73.0
+offset_right = 1340.0
+offset_bottom = 503.0
+rotation = 0.05309
+scale = Vector2(0.274487, 0.274487)
 texture = ExtResource("6_s0j2t")
 script = ExtResource("15_75k32")
 
 [node name="Bubble4" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 694.0
-offset_top = 85.0
-offset_right = 1347.0
-offset_bottom = 687.0
-scale = Vector2(0.232504, 0.232504)
+offset_left = 730.0
+offset_top = 61.0
+offset_right = 1383.0
+offset_bottom = 663.0
+rotation = 0.0573861
+scale = Vector2(0.25642, 0.25642)
 texture = ExtResource("7_5plo5")
 script = ExtResource("16_f07lr")
+
+[node name="QuestionMark" type="TextureRect" parent="."]
+offset_left = 752.0
+offset_top = -68.0
+offset_right = 1100.0
+offset_bottom = 421.0
+rotation = 0.0763706
+scale = Vector2(0.212197, 0.212197)
+pivot_offset = Vector2(181.202, 245.401)
+texture = ExtResource("6_kvuqf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="QuestionMark"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_b8c48")
+}
+autoplay = "RotateQuestionMark"
 
 [connection signal="pressed" from="Food1" to="." method="_on_food_1_pressed"]
 [connection signal="pressed" from="Food2" to="." method="_on_food_2_pressed"]
