@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 
 func _on_food_1_pressed() -> void:
 	if bubble1.modulate == Color("#ffffff"):
-		bubble1.modulate == Color("#ffffff00")
+		bubble1.modulate = Color("#ffffff00")
 		num_clicked += 1
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
@@ -93,7 +93,7 @@ func _on_food_1_pressed() -> void:
 
 func _on_food_2_pressed() -> void:
 	if bubble2.modulate == Color("#ffffff"):
-		bubble2.modulate == Color("#ffffff00")
+		bubble2.modulate = Color("#ffffff00")
 		num_clicked += 1
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
@@ -138,7 +138,7 @@ func _on_food_2_pressed() -> void:
 
 func _on_food_3_pressed() -> void:
 	if bubble3.modulate == Color("#ffffff"):
-		bubble3.modulate == Color("#ffffff00")
+		bubble3.modulate = Color("#ffffff00")
 		num_clicked += 1
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
@@ -183,7 +183,7 @@ func _on_food_3_pressed() -> void:
 
 func _on_food_4_pressed() -> void:
 	if bubble4.modulate == Color("#ffffff"):
-		bubble4.modulate == Color("#ffffff00")
+		bubble4.modulate = Color("#ffffff00")
 		num_clicked += 1
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
