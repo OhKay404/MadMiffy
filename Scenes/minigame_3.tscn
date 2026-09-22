@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=17 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
 [ext_resource type="Texture2D" uid="uid://biraf6t0kkoga" path="res://Images/MadMiffyBackground.png" id="2_5plo5"]
 [ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_ihkhm"]
 [ext_resource type="Texture2D" uid="uid://y8u7vb4an88n" path="res://Images/Food1.png" id="4_4cfv6"]
+[ext_resource type="Texture2D" uid="uid://b1i28x41s51xb" path="res://Images/table.png" id="4_f07lr"]
 [ext_resource type="Texture2D" uid="uid://ce5a2yts5cj2t" path="res://Images/Food2.png" id="5_mu65p"]
 [ext_resource type="Texture2D" uid="uid://jr6sfy6gxal2" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://ctvx46d7pmskx" path="res://Images/Food4.png" id="7_5plo5"]
@@ -21,18 +22,18 @@ script = ExtResource("1_y6mal")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 632.0
-offset_top = -753.0
+offset_top = -691.0
 offset_right = 2552.0
-offset_bottom = 327.0
+offset_bottom = 389.0
 rotation = 1.5708
 scale = Vector2(0.600491, 0.600051)
 texture = ExtResource("2_5plo5")
 
 [node name="Background2" type="TextureRect" parent="."]
 offset_left = 1159.0
-offset_top = -753.0
+offset_top = -691.0
 offset_right = 3079.0
-offset_bottom = 327.0
+offset_bottom = 389.0
 rotation = 1.5708
 scale = Vector2(0.600491, 0.600051)
 texture = ExtResource("2_5plo5")
@@ -46,11 +47,12 @@ scale = Vector2(0.568962, 0.568962)
 texture = ExtResource("1_asmx3")
 
 [node name="Table" type="TextureRect" parent="."]
-offset_left = -16.0
-offset_top = 382.0
-offset_right = 1177.0
-offset_bottom = 672.0
-texture = ExtResource("2_ihkhm")
+offset_left = -151.0
+offset_top = 420.0
+offset_right = 1415.0
+offset_bottom = 1087.0
+scale = Vector2(0.9274, 0.9274)
+texture = ExtResource("4_f07lr")
 
 [node name="SpeechBubble" type="TextureRect" parent="."]
 offset_left = 680.0
@@ -60,36 +62,36 @@ offset_bottom = 246.0
 texture = ExtResource("2_ihkhm")
 
 [node name="Food1" type="TextureButton" parent="."]
-offset_left = 238.0
-offset_top = 413.0
-offset_right = 930.0
-offset_bottom = 847.0
+offset_left = 192.0
+offset_top = 426.0
+offset_right = 884.0
+offset_bottom = 860.0
 scale = Vector2(0.214671, 0.216227)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_4cfv6")
 
 [node name="Food2" type="TextureButton" parent="."]
-offset_left = 426.0
-offset_top = 404.0
-offset_right = 1017.0
-offset_bottom = 913.0
+offset_left = 407.0
+offset_top = 405.0
+offset_right = 998.0
+offset_bottom = 914.0
 scale = Vector2(0.206804, 0.184567)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_mu65p")
 
 [node name="Food3" type="TextureButton" parent="."]
-offset_left = 605.0
+offset_left = 606.0
 offset_top = 406.0
-offset_right = 1214.0
+offset_right = 1215.0
 offset_bottom = 836.0
 scale = Vector2(0.264954, 0.273637)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_s0j2t")
 
 [node name="Food4" type="TextureButton" parent="."]
-offset_left = 834.0
+offset_left = 843.0
 offset_top = 402.0
-offset_right = 1491.0
+offset_right = 1500.0
 offset_bottom = 1018.0
 scale = Vector2(0.234232, 0.214311)
 mouse_default_cursor_shape = 2
