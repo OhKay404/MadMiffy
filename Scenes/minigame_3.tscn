@@ -62,28 +62,28 @@ offset_bottom = 246.0
 texture = ExtResource("2_ihkhm")
 
 [node name="Food1" type="TextureButton" parent="."]
-offset_left = 192.0
-offset_top = 426.0
-offset_right = 884.0
-offset_bottom = 860.0
-scale = Vector2(0.214671, 0.216227)
+offset_left = 158.0
+offset_top = 422.0
+offset_right = 850.0
+offset_bottom = 856.0
+scale = Vector2(0.235619, 0.237327)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_4cfv6")
 
 [node name="Food2" type="TextureButton" parent="."]
-offset_left = 407.0
-offset_top = 405.0
-offset_right = 998.0
-offset_bottom = 914.0
-scale = Vector2(0.206804, 0.184567)
+offset_left = 393.0
+offset_top = 395.0
+offset_right = 984.0
+offset_bottom = 904.0
+scale = Vector2(0.244621, 0.218318)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_mu65p")
 
 [node name="Food3" type="TextureButton" parent="."]
 offset_left = 606.0
-offset_top = 406.0
+offset_top = 395.0
 offset_right = 1215.0
-offset_bottom = 836.0
+offset_bottom = 825.0
 scale = Vector2(0.264954, 0.273637)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_s0j2t")
