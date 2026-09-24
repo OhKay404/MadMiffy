@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=25 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -10,13 +10,32 @@
 [ext_resource type="Texture2D" uid="uid://b1etomoyij655" path="res://Images/QuestionMark.png" id="6_kvuqf"]
 [ext_resource type="Texture2D" uid="uid://jr6sfy6gxal2" path="res://Images/Food3.png" id="6_s0j2t"]
 [ext_resource type="Texture2D" uid="uid://ctvx46d7pmskx" path="res://Images/Food4.png" id="7_5plo5"]
+[ext_resource type="Script" uid="uid://bvnuwv21qjh73" path="res://Scripts/food_1.gd" id="7_o2tgi"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="9_4cfv6"]
+[ext_resource type="Script" uid="uid://bt2v410a4q1xq" path="res://Scripts/food_2.gd" id="9_fsk5v"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="11_5plo5"]
+[ext_resource type="Script" uid="uid://cyrxkycun5uuk" path="res://Scripts/food_3.gd" id="11_b8c48"]
 [ext_resource type="Script" uid="uid://sjw3fl4pvo4w" path="res://Scripts/food_served.gd" id="12_1kvof"]
 [ext_resource type="Script" uid="uid://8hjy8it6vwg4" path="res://Scripts/bubble_1.gd" id="13_1kvof"]
+[ext_resource type="Script" uid="uid://b1nc157fye6hu" path="res://Scripts/food_4.gd" id="13_rneht"]
 [ext_resource type="Script" uid="uid://cf4fyc6r22t1l" path="res://Scripts/bubble_2.gd" id="14_7u6rh"]
 [ext_resource type="Script" uid="uid://c7v442vauk0ro" path="res://Scripts/bubble_3.gd" id="15_75k32"]
 [ext_resource type="Script" uid="uid://cn85o0son2exk" path="res://Scripts/bubble_4.gd" id="16_f07lr"]
+
+[sub_resource type="Animation" id="Animation_fsk5v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuestionMark:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0763706]
+}
 
 [sub_resource type="Animation" id="Animation_o2tgi"]
 resource_name = "RotateQuestionMark"
@@ -32,21 +51,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0763706, -0.0732259]
-}
-
-[sub_resource type="Animation" id="Animation_fsk5v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("QuestionMark:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0763706]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b8c48"]
@@ -90,40 +94,48 @@ scale = Vector2(0.414882, 0.414882)
 texture = ExtResource("5_f07lr")
 
 [node name="Food1" type="TextureButton" parent="."]
-offset_left = 158.0
-offset_top = 422.0
-offset_right = 850.0
-offset_bottom = 856.0
+offset_left = -106.0
+offset_top = 325.0
+offset_right = 586.0
+offset_bottom = 759.0
 scale = Vector2(0.235619, 0.237327)
+pivot_offset = Vector2(344.729, 135.53)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_4cfv6")
+script = ExtResource("7_o2tgi")
 
 [node name="Food2" type="TextureButton" parent="."]
-offset_left = 393.0
-offset_top = 395.0
-offset_right = 984.0
-offset_bottom = 904.0
+offset_left = 156.0
+offset_top = 150.0
+offset_right = 747.0
+offset_bottom = 659.0
 scale = Vector2(0.244621, 0.218318)
+pivot_offset = Vector2(306.597, 316.053)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_mu65p")
+script = ExtResource("9_fsk5v")
 
 [node name="Food3" type="TextureButton" parent="."]
-offset_left = 606.0
-offset_top = 395.0
-offset_right = 1215.0
-offset_bottom = 825.0
+offset_left = 389.0
+offset_top = 257.0
+offset_right = 998.0
+offset_bottom = 687.0
 scale = Vector2(0.264954, 0.273637)
+pivot_offset = Vector2(301.939, 193.687)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_s0j2t")
+script = ExtResource("11_b8c48")
 
 [node name="Food4" type="TextureButton" parent="."]
-offset_left = 843.0
-offset_top = 402.0
-offset_right = 1500.0
-offset_bottom = 1018.0
+offset_left = 591.0
+offset_top = 181.0
+offset_right = 1248.0
+offset_bottom = 797.0
 scale = Vector2(0.234232, 0.214311)
+pivot_offset = Vector2(328.734, 270.635)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_5plo5")
+script = ExtResource("13_rneht")
 
 [node name="ThemedTimer" parent="." instance=ExtResource("9_4cfv6")]
 
@@ -203,7 +215,15 @@ libraries = {
 }
 autoplay = "RotateQuestionMark"
 
+[connection signal="mouse_entered" from="Food1" to="Food1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Food1" to="Food1" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food1" to="." method="_on_food_1_pressed"]
+[connection signal="mouse_entered" from="Food2" to="Food2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Food2" to="Food2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food2" to="." method="_on_food_2_pressed"]
+[connection signal="mouse_entered" from="Food3" to="Food3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Food3" to="Food3" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food3" to="." method="_on_food_3_pressed"]
+[connection signal="mouse_entered" from="Food4" to="Food4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Food4" to="Food4" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food4" to="." method="_on_food_4_pressed"]
