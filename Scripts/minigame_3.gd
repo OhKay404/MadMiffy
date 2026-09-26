@@ -148,9 +148,9 @@ func _on_food_4_pressed() -> void:
 
 func miffy_tween() -> void:
 	var tween:Tween
-	if tween:tween.kill()
+	var original_Y = $Miffy.position.y
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_QUART)
-	tween.tween_property($Miffy, "position:y", $Miffy.position.y - 20, 0.2)
-	tween.tween_property($Miffy, "position:y", $Miffy.position.y + 20, 0.15)
+	tween.set_trans(Tween.TRANS_EXPO)
+	tween.tween_property($Miffy, "position:y", original_Y - 20, 0.2)
+	tween.tween_property($Miffy, "position:y", original_Y, 0.15)

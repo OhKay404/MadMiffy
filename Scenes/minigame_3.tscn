@@ -71,9 +71,9 @@ texture = ExtResource("2_f07lr")
 
 [node name="Miffy" type="TextureRect" parent="."]
 offset_left = 449.0
-offset_top = 108.0
+offset_top = 107.0
 offset_right = 871.0
-offset_bottom = 731.0
+offset_bottom = 730.0
 scale = Vector2(0.568962, 0.568962)
 texture = ExtResource("1_asmx3")
 
