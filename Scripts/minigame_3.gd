@@ -42,8 +42,10 @@ func _on_food_1_pressed() -> void:
 		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 		else:
 			randomize()
@@ -68,8 +70,10 @@ func _on_food_2_pressed() -> void:
 		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 		else:
 			randomize()
@@ -94,8 +98,10 @@ func _on_food_3_pressed() -> void:
 		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 		else:
 			randomize()
@@ -120,8 +126,10 @@ func _on_food_4_pressed() -> void:
 		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
+				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 		else:
 			randomize()
@@ -143,6 +151,6 @@ func miffy_tween() -> void:
 	if tween:tween.kill()
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_QUINT)
-	tween.tween_property($Miffy, "position:y", $Miffy.position.y - 15, 0.25)
-	tween.tween_property($Miffy, "position:y", $Miffy.position.y + 15, 0.25)
+	tween.set_trans(Tween.TRANS_QUART)
+	tween.tween_property($Miffy, "position:y", $Miffy.position.y - 20, 0.2)
+	tween.tween_property($Miffy, "position:y", $Miffy.position.y + 20, 0.15)

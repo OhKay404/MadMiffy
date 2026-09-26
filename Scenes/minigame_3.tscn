@@ -71,9 +71,9 @@ texture = ExtResource("2_f07lr")
 
 [node name="Miffy" type="TextureRect" parent="."]
 offset_left = 449.0
-offset_top = 97.0
+offset_top = 108.0
 offset_right = 871.0
-offset_bottom = 720.0
+offset_bottom = 731.0
 scale = Vector2(0.568962, 0.568962)
 texture = ExtResource("1_asmx3")
 
@@ -215,15 +215,23 @@ libraries = {
 }
 autoplay = "RotateQuestionMark"
 
+[connection signal="button_down" from="Food1" to="Food1" method="_on_button_down"]
+[connection signal="button_up" from="Food1" to="Food1" method="_on_button_up"]
 [connection signal="mouse_entered" from="Food1" to="Food1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Food1" to="Food1" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food1" to="." method="_on_food_1_pressed"]
+[connection signal="button_down" from="Food2" to="Food2" method="_on_button_down"]
+[connection signal="button_up" from="Food2" to="Food2" method="_on_button_up"]
 [connection signal="mouse_entered" from="Food2" to="Food2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Food2" to="Food2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food2" to="." method="_on_food_2_pressed"]
+[connection signal="button_down" from="Food3" to="Food3" method="_on_button_down"]
+[connection signal="button_up" from="Food3" to="Food3" method="_on_button_up"]
 [connection signal="mouse_entered" from="Food3" to="Food3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Food3" to="Food3" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food3" to="." method="_on_food_3_pressed"]
+[connection signal="button_down" from="Food4" to="Food4" method="_on_button_down"]
+[connection signal="button_up" from="Food4" to="Food4" method="_on_button_up"]
 [connection signal="mouse_entered" from="Food4" to="Food4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Food4" to="Food4" method="_on_mouse_exited"]
 [connection signal="pressed" from="Food4" to="." method="_on_food_4_pressed"]
