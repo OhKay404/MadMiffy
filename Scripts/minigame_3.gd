@@ -39,6 +39,7 @@ func _on_food_1_pressed() -> void:
 	if bubble1.modulate == Color("#ffffff"):
 		bubble1.modulate = Color("#ffffff00")
 		num_clicked += 1
+		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
@@ -64,6 +65,7 @@ func _on_food_2_pressed() -> void:
 	if bubble2.modulate == Color("#ffffff"):
 		bubble2.modulate = Color("#ffffff00")
 		num_clicked += 1
+		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
@@ -89,6 +91,7 @@ func _on_food_3_pressed() -> void:
 	if bubble3.modulate == Color("#ffffff"):
 		bubble3.modulate = Color("#ffffff00")
 		num_clicked += 1
+		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
@@ -114,6 +117,7 @@ func _on_food_4_pressed() -> void:
 	if bubble4.modulate == Color("#ffffff"):
 		bubble4.modulate = Color("#ffffff00")
 		num_clicked += 1
+		miffy_tween()
 		if num_clicked == 3:
 			if Global.minigames_done == 3:
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
@@ -133,3 +137,12 @@ func _on_food_4_pressed() -> void:
 			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+func miffy_tween() -> void:
+	var tween:Tween
+	if tween:tween.kill()
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_QUINT)
+	tween.tween_property($Miffy, "position:y", $Miffy.position.y - 15, 0.25)
+	tween.tween_property($Miffy, "position:y", $Miffy.position.y + 15, 0.25)
