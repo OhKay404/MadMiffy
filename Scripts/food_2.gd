@@ -39,7 +39,7 @@ func _on_button_down() -> void:
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CIRC)
-	tween.tween_property(self, "scale", Vector2(0.23, 0.23), 0.3)
+	tween.tween_property(self, "scale", Vector2(0.23, 0.23), 0.2)
 
 
 
@@ -48,4 +48,4 @@ func _on_button_up() -> void:
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CIRC)
-	tween.tween_property(self, "scale", Vector2(0.28, 0.28), 0.3)
+	tween.tween_property(self, "scale", Vector2(0.28, 0.28), 0.2)
