@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=31 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -94,6 +94,67 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_fsk5v"),
 &"RotateQuestionMark": SubResource("Animation_o2tgi")
+}
+
+[sub_resource type="Animation" id="Animation_lgqf1"]
+resource_name = "Float"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(61, 133), Vector2(61, 140), Vector2(61, 133), Vector2(61, 140), Vector2(61, 133)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ls8yj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(61, 133)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ls8yj"]
+_data = {
+&"Float": SubResource("Animation_lgqf1"),
+&"RESET": SubResource("Animation_ls8yj")
 }
 
 [node name="Minigame_3" type="Node2D"]
@@ -260,20 +321,26 @@ libraries = {
 }
 autoplay = "RotateQuestionMark"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Directions" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 87.0
-offset_top = 137.0
-offset_right = 429.0
-offset_bottom = 285.0
+offset_left = 61.0
+offset_top = 133.0
+offset_right = 437.0
+offset_bottom = 281.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
 theme_override_constants/outline_size = 17
 theme_override_fonts/normal_font = ExtResource("11_5plo5")
 theme_override_font_sizes/normal_font_size = 70
-text = "Click Miffy's Order!"
+text = "Click on Miffy's Order!"
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Directions"]
+libraries = {
+&"": SubResource("AnimationLibrary_ls8yj")
+}
+autoplay = "Float"
 
 [connection signal="button_down" from="Food1" to="Food1" method="_on_button_down"]
 [connection signal="button_up" from="Food1" to="Food1" method="_on_button_up"]

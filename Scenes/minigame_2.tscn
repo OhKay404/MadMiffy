@@ -124,11 +124,12 @@ texture = ExtResource("1_dfb65")
 position = Vector2(-5, -5)
 
 [node name="Directions" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0)
 clip_contents = false
-offset_left = 155.0
-offset_top = 46.0
-offset_right = 889.0
-offset_bottom = 195.0
+offset_left = 152.0
+offset_top = 29.0
+offset_right = 886.0
+offset_bottom = 178.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -147,10 +148,10 @@ autoplay = "floating_directions"
 
 [node name="HeartsClickedTracker" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 172.0
-offset_top = 82.0
-offset_right = 873.0
-offset_bottom = 210.0
+offset_left = -105.0
+offset_top = 570.0
+offset_right = 596.0
+offset_bottom = 698.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
