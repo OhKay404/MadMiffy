@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=28 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -21,6 +21,43 @@
 [ext_resource type="Script" uid="uid://cf4fyc6r22t1l" path="res://Scripts/bubble_2.gd" id="14_7u6rh"]
 [ext_resource type="Script" uid="uid://c7v442vauk0ro" path="res://Scripts/bubble_3.gd" id="15_75k32"]
 [ext_resource type="Script" uid="uid://cn85o0son2exk" path="res://Scripts/bubble_4.gd" id="16_f07lr"]
+
+[sub_resource type="Animation" id="Animation_rneht"]
+resource_name = "Floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_un4qg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0523599]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lgqf1"]
+_data = {
+&"Floating": SubResource("Animation_rneht"),
+&"RESET": SubResource("Animation_un4qg")
+}
 
 [sub_resource type="Animation" id="Animation_fsk5v"]
 length = 0.001
@@ -70,12 +107,20 @@ scale = Vector2(0.60002, 0.592489)
 texture = ExtResource("2_f07lr")
 
 [node name="Miffy" type="TextureRect" parent="."]
-offset_left = 449.0
-offset_top = 107.0
-offset_right = 871.0
-offset_bottom = 730.0
+offset_left = 345.0
+offset_top = -82.0
+offset_right = 767.0
+offset_bottom = 541.0
+rotation = -0.0523599
 scale = Vector2(0.568962, 0.568962)
+pivot_offset = Vector2(230.244, 437.639)
 texture = ExtResource("1_asmx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Miffy"]
+libraries = {
+&"": SubResource("AnimationLibrary_lgqf1")
+}
+autoplay = "Floating"
 
 [node name="Table" type="TextureRect" parent="."]
 offset_left = -151.0
