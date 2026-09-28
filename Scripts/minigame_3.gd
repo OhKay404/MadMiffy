@@ -21,7 +21,7 @@ func _ready() -> void:
 	var bubble = get("bubble" + str(random_num))
 	await get_tree().create_timer(0.3).timeout
 	bubble.modulate = "#ffffff"
-	await themed_timer.Timer(8)
+	await themed_timer.Timer(5)
 	timer_end = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
