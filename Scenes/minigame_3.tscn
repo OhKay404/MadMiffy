@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cvmkp0el8ylom"]
+[gd_scene load_steps=34 format=3 uid="uid://cvmkp0el8ylom"]
 
 [ext_resource type="Texture2D" uid="uid://drupg3l7lgr4v" path="res://Images/MiffyCharacter.png" id="1_asmx3"]
 [ext_resource type="Script" uid="uid://cfp64lba6403o" path="res://Scripts/minigame_3.gd" id="1_y6mal"]
@@ -57,6 +57,44 @@ tracks/0/keys = {
 _data = {
 &"Floating": SubResource("Animation_rneht"),
 &"RESET": SubResource("Animation_un4qg")
+}
+
+[sub_resource type="Animation" id="Animation_a3ygs"]
+resource_name = "Float"
+length = 0.8
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(174, 40), Vector2(174, 36)]
+}
+
+[sub_resource type="Animation" id="Animation_jovoe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(174, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpjwy"]
+_data = {
+&"Float": SubResource("Animation_a3ygs"),
+&"RESET": SubResource("Animation_jovoe")
 }
 
 [sub_resource type="Animation" id="Animation_fsk5v"]
@@ -248,9 +286,9 @@ script = ExtResource("13_rneht")
 [node name="FoodServed" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 174.0
-offset_top = 36.0
+offset_top = 40.0
 offset_right = 591.0
-offset_bottom = 128.0
+offset_bottom = 132.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -259,6 +297,12 @@ theme_override_fonts/normal_font = ExtResource("11_5plo5")
 theme_override_font_sizes/normal_font_size = 65
 text = "Food Served: 0/3"
 script = ExtResource("12_1kvof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FoodServed"]
+libraries = {
+&"": SubResource("AnimationLibrary_tpjwy")
+}
+autoplay = "Float"
 
 [node name="Bubble1" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
