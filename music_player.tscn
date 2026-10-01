@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fdtjisjph3u3"]
+
+[ext_resource type="AudioStream" uid="uid://cb7mj77ks54la" path="res://Music/town.wav" id="1_fvyft"]
+
+[node name="Test" type="AudioStreamPlayer"]
+stream = ExtResource("1_fvyft")
+autoplay = true

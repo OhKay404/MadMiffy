@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://bd5bwndceiles" path="res://Scripts/jump_drop.gd" id="4_0k35h"]
 [ext_resource type="Texture2D" uid="uid://tqqh7djnamxb" path="res://Images/HeartSlider.png" id="4_2gedn"]
 [ext_resource type="StyleBox" uid="uid://cilvx24a8hdq" path="res://StyleBoxFlats/button_hover.tres" id="4_3wso2"]
-[ext_resource type="AudioStream" uid="uid://oo70daf34cv7" path="res://sound-of-waves-marine-drive-mumbai.mp3" id="4_ibs2t"]
 [ext_resource type="StyleBox" uid="uid://c3lenfk0dpl48" path="res://StyleBoxFlats/button_pressed.tres" id="5_h221s"]
 [ext_resource type="StyleBox" uid="uid://cgp48ikxadsuc" path="res://StyleBoxFlats/button_normal.tres" id="6_ye64u"]
 [ext_resource type="Script" uid="uid://d3c5x8e88psaw" path="res://Scripts/home_button.gd" id="7_h221s"]
@@ -20,6 +19,7 @@
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
 [ext_resource type="StyleBox" uid="uid://cpo48bxtl402y" path="res://StyleBoxFlats/dropdown_pressed.tres" id="9_qw1nj"]
 [ext_resource type="Script" uid="uid://s45yub28utri" path="res://Scripts/move_drop.gd" id="9_ye64u"]
+[ext_resource type="PackedScene" uid="uid://fdtjisjph3u3" path="res://music_player.tscn" id="16_qwaxv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li81v"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -279,9 +279,7 @@ libraries = {
 }
 autoplay = "rotating_miffy"
 
-[node name="Test" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ibs2t")
-autoplay = true
+[node name="Test" parent="." instance=ExtResource("16_qwaxv")]
 
 [node name="VolumeAdjust" type="HSlider" parent="."]
 offset_left = 576.135
