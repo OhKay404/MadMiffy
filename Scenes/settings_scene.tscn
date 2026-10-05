@@ -279,7 +279,7 @@ libraries = {
 }
 autoplay = "rotating_miffy"
 
-[node name="Test" parent="." instance=ExtResource("16_qwaxv")]
+[node name="Music" parent="." instance=ExtResource("16_qwaxv")]
 
 [node name="VolumeAdjust" type="HSlider" parent="."]
 offset_left = 576.135
@@ -293,7 +293,7 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_ibs2t")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_2gedn")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_6giix")
 min_value = -25.0
-max_value = 0.0
+max_value = 10.0
 
 [node name="ToggleVolume" type="CheckButton" parent="."]
 offset_left = 455.209
