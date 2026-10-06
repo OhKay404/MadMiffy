@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cqa23eiocwyk8"]
+[gd_scene load_steps=21 format=3 uid="uid://cqa23eiocwyk8"]
 
 [ext_resource type="Script" uid="uid://ckco0lkp5nc3l" path="res://Scripts/SceneScripts/title_screen.gd" id="1_4gxqj"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="2_4gxqj"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://00hb53p4uhwt" path="res://Scripts/start.gd" id="7_6vd4x"]
 [ext_resource type="Script" uid="uid://dhabx5scy0adh" path="res://Scripts/settings.gd" id="8_n82rj"]
 [ext_resource type="Script" uid="uid://c1m1eu0nyhsgl" path="res://Scripts/quit.gd" id="9_0061g"]
-[ext_resource type="PackedScene" uid="uid://fdtjisjph3u3" path="res://music_player.tscn" id="11_sqelc"]
 
 [sub_resource type="Animation" id="Animation_8mikk"]
 resource_name = "MovingMiffy"
@@ -252,8 +251,6 @@ theme_override_styles/pressed = ExtResource("4_twnyg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4gxqj")
 text = "Quit"
 script = ExtResource("9_0061g")
-
-[node name="Music" parent="." instance=ExtResource("11_sqelc")]
 
 [connection signal="button_down" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_start_button_down"]
 [connection signal="button_up" from="VBoxContainer/Control/Start" to="VBoxContainer/Control/Start" method="_on_start_button_up"]

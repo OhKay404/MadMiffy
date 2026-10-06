@@ -2,8 +2,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Music.current_screen = "title"
-	
+	#MusicManager.current_screen = "title"
+	MusicManager.play_song(MusicManager.title)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
