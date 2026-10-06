@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bs5y7eb74f6ra"]
+[gd_scene load_steps=27 format=3 uid="uid://bs5y7eb74f6ra"]
 
 [ext_resource type="Script" uid="uid://csefjobnxcg3o" path="res://Scripts/SceneScripts/settings_scene.gd" id="1_6giix"]
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_amiku"]
@@ -19,7 +19,6 @@
 [ext_resource type="Script" uid="uid://cteyuhrb8jlj" path="res://Scripts/toggle_volume.gd" id="9_dpiik"]
 [ext_resource type="StyleBox" uid="uid://cpo48bxtl402y" path="res://StyleBoxFlats/dropdown_pressed.tres" id="9_qw1nj"]
 [ext_resource type="Script" uid="uid://s45yub28utri" path="res://Scripts/move_drop.gd" id="9_ye64u"]
-[ext_resource type="PackedScene" uid="uid://fdtjisjph3u3" path="res://music_player.tscn" id="16_qwaxv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li81v"]
 bg_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -278,8 +277,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_6giix")
 }
 autoplay = "rotating_miffy"
-
-[node name="Music" parent="." instance=ExtResource("16_qwaxv")]
 
 [node name="VolumeAdjust" type="HSlider" parent="."]
 offset_left = 576.135
