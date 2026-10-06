@@ -8,7 +8,7 @@ var heart_collected:int = 0 # just keeping track of garlic collected
 var timer_end:bool = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
-
+	MusicManager.play_song(MusicManager.m1)
 		#Below you can see that I have a function that I named. I grab a 
 		#function from it that was created in it's script and use `await` to 
 		# tell the script to wait for a signal, or for when a function finshes

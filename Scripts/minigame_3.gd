@@ -16,6 +16,7 @@ var timer_end:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.play_song(MusicManager.m3)
 	randomize()
 	var random_num = int(randi_range(1, 4))
 	var bubble = get("bubble" + str(random_num))
