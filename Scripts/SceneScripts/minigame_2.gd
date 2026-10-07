@@ -5,6 +5,7 @@ var buttons_pressed:int = 0
 var timer_end:bool = false
 
 func _ready() -> void:
+	MusicManager.play_song(MusicManager.timer, 86.0)
 	await themed_timer.Timer(5.5)
 	#after this is completed...
 	timer_end = true 

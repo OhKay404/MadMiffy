@@ -8,7 +8,6 @@ var music_volume: int
 var title = preload("res://Music/town.wav")
 var timer = preload("res://Music/start.wav")
 var m1 = preload("res://Music/boss battle.wav")
-var m2 = preload("res://Music/boss battle.wav")
 var m3 = preload("res://Music/regrowth wip.wav")
 var winner = preload("res://Music/shop.wav")
 var death = preload("res://Music/journey.wav")
@@ -24,6 +23,8 @@ func _process(delta: float) -> void:
 func play_song(song: AudioStream, time: float = 0.0):
 	if stream != song:
 		stream = song
+		play(time)
+	if stream == song and time!= 0:
 		play(time)
 
 
