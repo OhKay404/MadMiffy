@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=2 format=3 uid="uid://dri12fci8w1pd"]
+
+[ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
 
 [node name="Minigame_4" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.600005, 0.600013)
+texture = ExtResource("1_4ashd")
