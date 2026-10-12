@@ -10,6 +10,7 @@ var timer = preload("res://Music/start.wav")
 var m1 = preload("res://Music/boss battle.wav")
 var m2 = preload("res://Music/start2.wav")
 var m3 = preload("res://Music/regrowth wip.wav")
+var m4 = preload("res://Music/blossom.wav")
 var winner = preload("res://Music/shop.wav")
 var death = preload("res://Music/journey.wav")
 

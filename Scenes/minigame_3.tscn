@@ -367,9 +367,9 @@ autoplay = "RotateQuestionMark"
 [node name="Directions" type="RichTextLabel" parent="."]
 clip_contents = false
 offset_left = 61.0
-offset_top = 133.0
+offset_top = 140.0
 offset_right = 437.0
-offset_bottom = 281.0
+offset_bottom = 288.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)

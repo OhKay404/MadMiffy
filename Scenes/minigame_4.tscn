@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=11 format=3 uid="uid://dri12fci8w1pd"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
 [ext_resource type="Script" uid="uid://cb0nncs3egk4j" path="res://Scripts/minigame_4.gd" id="1_lrixb"]
@@ -7,6 +7,67 @@
 [ext_resource type="Texture2D" uid="uid://dnewsqwffqrah" path="res://Images/Miffy_Mole.PNG" id="5_57wpc"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="5_ake4f"]
 [ext_resource type="Script" uid="uid://dpne21xj3f7f0" path="res://Scripts/miffys_wacked.gd" id="5_xea2i"]
+
+[sub_resource type="Animation" id="Animation_57wpc"]
+resource_name = "Float"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(329, 144), Vector2(329, 151), Vector2(329, 144), Vector2(329, 151), Vector2(329, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_frvhq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(329, 144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yexny"]
+_data = {
+&"Float": SubResource("Animation_57wpc"),
+&"RESET": SubResource("Animation_frvhq")
+}
 
 [node name="Minigame_4" type="Node2D"]
 script = ExtResource("1_lrixb")
@@ -79,6 +140,28 @@ theme_override_fonts/normal_font = ExtResource("5_ake4f")
 theme_override_font_sizes/normal_font_size = 65
 text = "Miffys Wacked: 0/5"
 script = ExtResource("5_xea2i")
+
+[node name="Directions" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 329.0
+offset_top = 144.0
+offset_right = 792.0
+offset_bottom = 231.0
+theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
+theme_override_constants/outline_size = 17
+theme_override_fonts/normal_font = ExtResource("5_ake4f")
+theme_override_font_sizes/normal_font_size = 70
+text = "Wack the Miffys!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Directions"]
+libraries = {
+&"": SubResource("AnimationLibrary_yexny")
+}
+autoplay = "Float"
 
 [connection signal="pressed" from="Mole1" to="." method="_on_mole_1_pressed"]
 [connection signal="pressed" from="Mole2" to="." method="_on_mole_2_pressed"]
