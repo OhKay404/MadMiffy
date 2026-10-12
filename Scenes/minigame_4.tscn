@@ -142,7 +142,7 @@ script = ExtResource("9_aaoy5")
 clip_contents = false
 offset_left = 177.0
 offset_top = 32.0
-offset_right = 656.0
+offset_right = 686.0
 offset_bottom = 106.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
@@ -150,7 +150,7 @@ theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1
 theme_override_constants/outline_size = 17
 theme_override_fonts/normal_font = ExtResource("5_ake4f")
 theme_override_font_sizes/normal_font_size = 65
-text = "Miffys Wacked: 0/5"
+text = "Miffies Whacked: 0/5"
 script = ExtResource("5_xea2i")
 
 [node name="Directions" type="RichTextLabel" parent="."]
@@ -165,7 +165,7 @@ theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1
 theme_override_constants/outline_size = 17
 theme_override_fonts/normal_font = ExtResource("5_ake4f")
 theme_override_font_sizes/normal_font_size = 70
-text = "Wack the Miffys!"
+text = "Whack the Miffies!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

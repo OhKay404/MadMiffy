@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "Miffys Wacked: " + str(get_parent().num_clicked) + "/5"
+	text = "Miffies Whacked: " + str(get_parent().num_clicked) + "/5"
 
 #func floating() -> void:
 	#if tween:tween.kill
