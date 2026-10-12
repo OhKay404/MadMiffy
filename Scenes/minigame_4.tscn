@@ -1,15 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=5 format=3 uid="uid://dri12fci8w1pd"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
+[ext_resource type="Script" uid="uid://cb0nncs3egk4j" path="res://Scripts/minigame_4.gd" id="1_lrixb"]
 [ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_e1srr"]
+[ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="3_xea2i"]
 
 [node name="Minigame_4" type="Node2D"]
+script = ExtResource("1_lrixb")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.600005, 0.600013)
 texture = ExtResource("1_4ashd")
+
+[node name="ThemedTimer" parent="." instance=ExtResource("3_xea2i")]
 
 [node name="WackStation" type="TextureRect" parent="."]
 offset_left = 333.0
@@ -19,6 +24,7 @@ offset_bottom = 548.0
 texture = ExtResource("2_e1srr")
 
 [node name="Mole1" type="TextureButton" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = 389.0
 offset_top = 169.0
 offset_right = 569.0
@@ -27,6 +33,7 @@ scale = Vector2(0.790865, 0.796688)
 texture_normal = ExtResource("2_e1srr")
 
 [node name="Mole2" type="TextureButton" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = 619.0
 offset_top = 174.0
 offset_right = 799.0
@@ -35,6 +42,7 @@ scale = Vector2(0.790865, 0.796688)
 texture_normal = ExtResource("2_e1srr")
 
 [node name="Mole3" type="TextureButton" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = 388.0
 offset_top = 356.0
 offset_right = 568.0
@@ -43,6 +51,7 @@ scale = Vector2(0.790865, 0.796688)
 texture_normal = ExtResource("2_e1srr")
 
 [node name="Mole4" type="TextureButton" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = 615.0
 offset_top = 358.0
 offset_right = 795.0
