@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=8 format=3 uid="uid://dri12fci8w1pd"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
 [ext_resource type="Script" uid="uid://cb0nncs3egk4j" path="res://Scripts/minigame_4.gd" id="1_lrixb"]
-[ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_e1srr"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="3_xea2i"]
+[ext_resource type="Texture2D" uid="uid://byagdfdtglxly" path="res://Images/WackStation.PNG" id="4_57wpc"]
+[ext_resource type="Texture2D" uid="uid://dnewsqwffqrah" path="res://Images/Miffy_Mole.PNG" id="5_57wpc"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="5_ake4f"]
 [ext_resource type="Script" uid="uid://dpne21xj3f7f0" path="res://Scripts/miffys_wacked.gd" id="5_xea2i"]
 
@@ -19,51 +20,50 @@ texture = ExtResource("1_4ashd")
 [node name="ThemedTimer" parent="." instance=ExtResource("3_xea2i")]
 
 [node name="WackStation" type="TextureRect" parent="."]
-offset_left = 332.0
-offset_top = 157.0
-offset_right = 828.0
-offset_bottom = 602.0
-texture = ExtResource("2_e1srr")
+offset_right = 3840.0
+offset_bottom = 2160.0
+scale = Vector2(0.300006, 0.300017)
+texture = ExtResource("4_57wpc")
 
 [node name="Mole1" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 388.0
-offset_top = 223.0
-offset_right = 568.0
-offset_bottom = 403.0
-scale = Vector2(0.790865, 0.796688)
+offset_left = 173.0
+offset_top = 253.0
+offset_right = 787.0
+offset_bottom = 1281.0
+scale = Vector2(0.220313, 0.221936)
 disabled = true
-texture_normal = ExtResource("2_e1srr")
+texture_normal = ExtResource("5_57wpc")
 
 [node name="Mole2" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 618.0
-offset_top = 228.0
-offset_right = 798.0
-offset_bottom = 408.0
-scale = Vector2(0.790865, 0.796688)
+offset_left = 390.0
+offset_top = 347.0
+offset_right = 1004.0
+offset_bottom = 1375.0
+scale = Vector2(0.22797, 0.229648)
 disabled = true
-texture_normal = ExtResource("2_e1srr")
+texture_normal = ExtResource("5_57wpc")
 
 [node name="Mole3" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 387.0
-offset_top = 410.0
-offset_right = 567.0
-offset_bottom = 590.0
-scale = Vector2(0.790865, 0.796688)
+offset_left = 600.0
+offset_top = 237.0
+offset_right = 1214.0
+offset_bottom = 1265.0
+scale = Vector2(0.231624, 0.23333)
 disabled = true
-texture_normal = ExtResource("2_e1srr")
+texture_normal = ExtResource("5_57wpc")
 
 [node name="Mole4" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 614.0
-offset_top = 412.0
-offset_right = 794.0
-offset_bottom = 592.0
-scale = Vector2(0.790865, 0.796688)
+offset_left = 822.0
+offset_top = 326.0
+offset_right = 1436.0
+offset_bottom = 1354.0
+scale = Vector2(0.236992, 0.238737)
 disabled = true
-texture_normal = ExtResource("2_e1srr")
+texture_normal = ExtResource("5_57wpc")
 
 [node name="Miffys Wacked" type="RichTextLabel" parent="."]
 clip_contents = false
