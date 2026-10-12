@@ -58,3 +58,8 @@ offset_right = 795.0
 offset_bottom = 538.0
 scale = Vector2(0.790865, 0.796688)
 texture_normal = ExtResource("2_e1srr")
+
+[connection signal="pressed" from="Mole1" to="." method="_on_mole_1_pressed"]
+[connection signal="pressed" from="Mole2" to="." method="_on_mole_2_pressed"]
+[connection signal="pressed" from="Mole3" to="." method="_on_mole_3_pressed"]
+[connection signal="pressed" from="Mole4" to="." method="_on_mole_4_pressed"]

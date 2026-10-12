@@ -1,5 +1,6 @@
 extends Node2D
 
+var num_clicked:int = 0
 var timer_end:bool = false
 @onready var themed_timer: Node2D = $ThemedTimer
 @onready var mole1:TextureButton = $Mole1
@@ -22,3 +23,117 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_mole_1_pressed() -> void:
+	if mole1.modulate == Color("#ffffff"):
+		mole1.modulate = Color("#ffffff00")
+		num_clicked += 1
+		#miffy_tween()
+		if num_clicked == 3:
+			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
+			else:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		else:
+			randomize()
+			var random_num = int(randi_range(1, 4))
+			var selected_mole = get("mole" + str(random_num))
+			selected_mole.modulate = "#ffffff00"
+			await get_tree().create_timer(0.3).timeout
+			selected_mole.modulate = "#ffffff"
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+
+func _on_mole_2_pressed() -> void:
+	if mole2.modulate == Color("#ffffff"):
+		mole2.modulate = Color("#ffffff00")
+		num_clicked += 1
+		#miffy_tween()
+		if num_clicked == 3:
+			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
+			else:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		else:
+			randomize()
+			var random_num = int(randi_range(1, 4))
+			var selected_mole = get("mole" + str(random_num))
+			selected_mole.modulate = "#ffffff00"
+			await get_tree().create_timer(0.3).timeout
+			selected_mole.modulate = "#ffffff"
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+
+func _on_mole_3_pressed() -> void:
+	if mole3.modulate == Color("#ffffff"):
+		mole3.modulate = Color("#ffffff00")
+		num_clicked += 1
+		#miffy_tween()
+		if num_clicked == 3:
+			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
+			else:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		else:
+			randomize()
+			var random_num = int(randi_range(1, 4))
+			var selected_mole = get("mole" + str(random_num))
+			selected_mole.modulate = "#ffffff00"
+			await get_tree().create_timer(0.3).timeout
+			selected_mole.modulate = "#ffffff"
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+
+
+
+func _on_mole_4_pressed() -> void:
+	if mole4.modulate == Color("#ffffff"):
+		mole4.modulate = Color("#ffffff00")
+		num_clicked += 1
+		#miffy_tween()
+		if num_clicked == 3:
+			if Global.minigames_done == 3:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
+			else:
+				await get_tree().create_timer(0.15).timeout
+				get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		else:
+			randomize()
+			var random_num = int(randi_range(1, 4))
+			var selected_mole = get("mole" + str(random_num))
+			selected_mole.modulate = "#ffffff00"
+			await get_tree().create_timer(0.3).timeout
+			selected_mole.modulate = "#ffffff"
+	else:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		if Global.lives < 1:
+			get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
