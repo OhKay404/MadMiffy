@@ -22,10 +22,21 @@ func _process(delta: float) -> void:
 	pass
 
 func play_song(song: AudioStream, time: float = 0.0):
-	if stream != song:
-		stream = song
-		play(time)
+	if !music_enabled:
+		pause()
+		return
+	if music_enabled:
+		if stream != song:
+			stream = song
+			play(time)
 
+
+func toggle_music(toggled_on : bool):
+	music_enabled = toggled_on
+	if music_enabled:
+		resume()
+	else:
+		pause()
 
 func pause():
 	stream_paused = true
