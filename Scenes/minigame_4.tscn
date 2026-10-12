@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=15 format=3 uid="uid://dri12fci8w1pd"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
 [ext_resource type="Script" uid="uid://cb0nncs3egk4j" path="res://Scripts/minigame_4.gd" id="1_lrixb"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dnewsqwffqrah" path="res://Images/Miffy_Mole.PNG" id="5_57wpc"]
 [ext_resource type="FontFile" uid="uid://d0hi4fplr7yai" path="res://Fonts/Jersey15-Regular.ttf" id="5_ake4f"]
 [ext_resource type="Script" uid="uid://dpne21xj3f7f0" path="res://Scripts/miffys_wacked.gd" id="5_xea2i"]
+[ext_resource type="Script" uid="uid://xek1mtcg71k8" path="res://Scripts/mole_1.gd" id="6_frvhq"]
+[ext_resource type="Script" uid="uid://bwrk0t1n3cy7v" path="res://Scripts/mole_2.gd" id="7_ksguu"]
+[ext_resource type="Script" uid="uid://fdlcfiu2puyc" path="res://Scripts/mole_3.gd" id="8_jlqlc"]
+[ext_resource type="Script" uid="uid://dk5abh5q3q7on" path="res://Scripts/mole_4.gd" id="9_aaoy5"]
 
 [sub_resource type="Animation" id="Animation_57wpc"]
 resource_name = "Float"
@@ -88,43 +92,51 @@ texture = ExtResource("4_57wpc")
 
 [node name="Mole1" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 173.0
-offset_top = 253.0
-offset_right = 787.0
-offset_bottom = 1281.0
+offset_left = -72.0
+offset_top = -283.0
+offset_right = 542.0
+offset_bottom = 745.0
 scale = Vector2(0.220313, 0.221936)
+pivot_offset = Vector2(313.19, 684.884)
 disabled = true
 texture_normal = ExtResource("5_57wpc")
+script = ExtResource("6_frvhq")
 
 [node name="Mole2" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 390.0
-offset_top = 347.0
-offset_right = 1004.0
-offset_bottom = 1375.0
-scale = Vector2(0.22797, 0.229648)
+offset_left = 147.0
+offset_top = -184.0
+offset_right = 761.0
+offset_bottom = 844.0
+scale = Vector2(0.218, 0.22)
+pivot_offset = Vector2(311.927, 695.455)
 disabled = true
 texture_normal = ExtResource("5_57wpc")
+script = ExtResource("7_ksguu")
 
 [node name="Mole3" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 600.0
-offset_top = 237.0
-offset_right = 1214.0
-offset_bottom = 1265.0
-scale = Vector2(0.231624, 0.23333)
+offset_left = 361.0
+offset_top = -296.0
+offset_right = 975.0
+offset_bottom = 732.0
+scale = Vector2(0.22, 0.221)
+pivot_offset = Vector2(313.636, 696.833)
 disabled = true
 texture_normal = ExtResource("5_57wpc")
+script = ExtResource("8_jlqlc")
 
 [node name="Mole4" type="TextureButton" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 822.0
-offset_top = 326.0
-offset_right = 1436.0
-offset_bottom = 1354.0
-scale = Vector2(0.236992, 0.238737)
+offset_left = 579.0
+offset_top = -199.0
+offset_right = 1193.0
+offset_bottom = 829.0
+scale = Vector2(0.22, 0.222)
+pivot_offset = Vector2(318.182, 693.694)
 disabled = true
 texture_normal = ExtResource("5_57wpc")
+script = ExtResource("9_aaoy5")
 
 [node name="Miffys Wacked" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -163,7 +175,23 @@ libraries = {
 }
 autoplay = "Float"
 
+[connection signal="button_down" from="Mole1" to="Mole1" method="_on_button_down"]
+[connection signal="button_up" from="Mole1" to="Mole1" method="_on_button_up"]
+[connection signal="mouse_entered" from="Mole1" to="Mole1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mole1" to="Mole1" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole1" to="." method="_on_mole_1_pressed"]
+[connection signal="button_down" from="Mole2" to="Mole2" method="_on_button_down"]
+[connection signal="button_up" from="Mole2" to="Mole2" method="_on_button_up"]
+[connection signal="mouse_entered" from="Mole2" to="Mole2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mole2" to="Mole2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole2" to="." method="_on_mole_2_pressed"]
+[connection signal="button_down" from="Mole3" to="Mole3" method="_on_button_down"]
+[connection signal="button_up" from="Mole3" to="Mole3" method="_on_button_up"]
+[connection signal="mouse_entered" from="Mole3" to="Mole3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mole3" to="Mole3" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole3" to="." method="_on_mole_3_pressed"]
+[connection signal="button_down" from="Mole4" to="Mole4" method="_on_button_down"]
+[connection signal="button_up" from="Mole4" to="Mole4" method="_on_button_up"]
+[connection signal="mouse_entered" from="Mole4" to="Mole4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mole4" to="Mole4" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole4" to="." method="_on_mole_4_pressed"]
