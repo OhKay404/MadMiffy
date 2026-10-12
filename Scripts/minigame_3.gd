@@ -42,7 +42,7 @@ func _on_food_1_pressed() -> void:
 		num_clicked += 1
 		miffy_tween()
 		if num_clicked == 3:
-			if Global.minigames_done == 3:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -70,7 +70,7 @@ func _on_food_2_pressed() -> void:
 		num_clicked += 1
 		miffy_tween()
 		if num_clicked == 3:
-			if Global.minigames_done == 3:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -98,7 +98,7 @@ func _on_food_3_pressed() -> void:
 		num_clicked += 1
 		miffy_tween()
 		if num_clicked == 3:
-			if Global.minigames_done == 3:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -126,7 +126,7 @@ func _on_food_4_pressed() -> void:
 		num_clicked += 1
 		miffy_tween()
 		if num_clicked == 3:
-			if Global.minigames_done == 3:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:

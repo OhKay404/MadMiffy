@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dri12fci8w1pd"]
+[gd_scene load_steps=6 format=3 uid="uid://dri12fci8w1pd"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_4ashd"]
 [ext_resource type="Script" uid="uid://cb0nncs3egk4j" path="res://Scripts/minigame_4.gd" id="1_lrixb"]
 [ext_resource type="Texture2D" uid="uid://br0ww71bi1fil" path="res://exports/index.apple-touch-icon.png" id="2_e1srr"]
 [ext_resource type="PackedScene" uid="uid://ciubhudsjrmgn" path="res://Scenes/themed_timer_scene.tscn" id="3_xea2i"]
+[ext_resource type="Script" uid="uid://dpne21xj3f7f0" path="res://Scripts/miffys_wacked.gd" id="5_xea2i"]
 
 [node name="Minigame_4" type="Node2D"]
 script = ExtResource("1_lrixb")
@@ -58,6 +59,13 @@ offset_right = 795.0
 offset_bottom = 538.0
 scale = Vector2(0.790865, 0.796688)
 texture_normal = ExtResource("2_e1srr")
+
+[node name="Miffys Wacked" type="RichTextLabel" parent="."]
+offset_left = 39.0
+offset_top = 125.0
+offset_right = 253.0
+offset_bottom = 234.0
+script = ExtResource("5_xea2i")
 
 [connection signal="pressed" from="Mole1" to="." method="_on_mole_1_pressed"]
 [connection signal="pressed" from="Mole2" to="." method="_on_mole_2_pressed"]

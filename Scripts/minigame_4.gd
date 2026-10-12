@@ -30,8 +30,8 @@ func _on_mole_1_pressed() -> void:
 		mole1.modulate = Color("#ffffff00")
 		num_clicked += 1
 		#miffy_tween()
-		if num_clicked == 3:
-			if Global.minigames_done == 3:
+		if num_clicked == 5:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -58,8 +58,8 @@ func _on_mole_2_pressed() -> void:
 		mole2.modulate = Color("#ffffff00")
 		num_clicked += 1
 		#miffy_tween()
-		if num_clicked == 3:
-			if Global.minigames_done == 3:
+		if num_clicked == 5:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -86,8 +86,8 @@ func _on_mole_3_pressed() -> void:
 		mole3.modulate = Color("#ffffff00")
 		num_clicked += 1
 		#miffy_tween()
-		if num_clicked == 3:
-			if Global.minigames_done == 3:
+		if num_clicked == 5:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
@@ -109,15 +109,13 @@ func _on_mole_3_pressed() -> void:
 			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 
-
-
 func _on_mole_4_pressed() -> void:
 	if mole4.modulate == Color("#ffffff"):
 		mole4.modulate = Color("#ffffff00")
 		num_clicked += 1
 		#miffy_tween()
-		if num_clicked == 3:
-			if Global.minigames_done == 3:
+		if num_clicked == 5:
+			if Global.minigames_done == 4:
 				await get_tree().create_timer(0.15).timeout
 				get_tree().change_scene_to_file("res://Scenes/winner_screen.tscn")
 			else:
