@@ -14,4 +14,13 @@ func _on_mouse_entered() -> void:
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CIRC)
-	tween.tween_property(self, "scale", Vector2(0.69, 0.69), 0.1)
+	tween.tween_property(self, "scale", Vector2(0.72, 0.72), 0.1)
+
+
+
+func _on_mouse_exited() -> void:
+	if tween:tween.kill()
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_CIRC)
+	tween.tween_property(self, "scale", Vector2(0.65, 0.65), 0.1)
