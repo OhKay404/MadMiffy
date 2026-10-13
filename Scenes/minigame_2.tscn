@@ -357,6 +357,7 @@ offset_top = 159.0
 offset_right = 320.0
 offset_bottom = 365.0
 scale = Vector2(0.657582, 0.657582)
+pivot_offset = Vector2(111.013, 97.4726)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
@@ -427,6 +428,7 @@ libraries = {
 }
 autoplay = "Floating_Buttons"
 
+[connection signal="mouse_entered" from="Button_1" to="Button_1" method="_on_mouse_entered"]
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]

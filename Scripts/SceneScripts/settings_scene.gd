@@ -6,7 +6,10 @@ func _ready() -> void:
 	$VolumeAdjust.value = MusicManager.music_volume
 	$ToggleVolume.button_pressed = MusicManager.music_enabled
 	if MusicManager.music_enabled:
+		$VolumeOnText.text = "On"
 		MusicManager.play_song(MusicManager.title)
+	else:
+		$VolumeOnText.text = "Off"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

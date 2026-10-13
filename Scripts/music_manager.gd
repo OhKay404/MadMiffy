@@ -26,16 +26,21 @@ func play_song(song: AudioStream, time: float = 0.0):
 	if !music_enabled:
 		pause()
 		return
-	if music_enabled:
-		if stream != song:
+		
+	if stream != song:
 			stream = song
+			stream_paused = false
 			play(time)
+	elif stream_paused:
+		resume()
 
 
 func toggle_music(toggled_on : bool):
 	music_enabled = toggled_on
 	if music_enabled:
 		resume()
+		if !playing:
+			play_song(title)
 	else:
 		pause()
 
