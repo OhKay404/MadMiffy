@@ -221,25 +221,25 @@ texture = ExtResource("3_tpp86")
 
 [node name="Heart4" type="TextureRect" parent="."]
 offset_left = 381.0
-offset_top = 165.0
+offset_top = 164.0
 offset_right = 601.0
-offset_bottom = 371.0
+offset_bottom = 370.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_tpp86")
 
 [node name="Heart3" type="TextureRect" parent="."]
 offset_left = 223.87
-offset_top = 164.0
+offset_top = 172.0
 offset_right = 443.87
-offset_bottom = 370.0
+offset_bottom = 378.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_tpp86")
 
 [node name="Heart2" type="TextureRect" parent="."]
 offset_left = 66.0
-offset_top = 172.0
+offset_top = 164.0
 offset_right = 286.0
-offset_bottom = 378.0
+offset_bottom = 370.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_tpp86")
 

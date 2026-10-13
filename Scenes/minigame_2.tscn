@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0vc2vc60i6tp"]
+[gd_scene load_steps=17 format=3 uid="uid://c0vc2vc60i6tp"]
 
 [ext_resource type="Texture2D" uid="uid://dedc3ydng1lbe" path="res://Images/MinigameBackground.png" id="1_dfb65"]
 [ext_resource type="Script" uid="uid://c3kq15bu4jq2q" path="res://Scripts/SceneScripts/minigame_2.gd" id="1_rfxq2"]
@@ -107,6 +107,188 @@ _data = {
 &"position_tracker": SubResource("Animation_1ja6b")
 }
 
+[sub_resource type="Animation" id="Animation_wu6l1"]
+resource_name = "Floating_Buttons"
+length = 0.7
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button_1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 159), Vector2(100, 163)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button_5:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(173, 378), Vector2(173, 374)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button_4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(404, 227), Vector2(404, 231)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button_6:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.278683, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459, 473), Vector2(459, 469)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button_3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.133333, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(671, 302), Vector2(671, 306)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Button_7:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(899, 430), Vector2(899, 426)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button_2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.257722, 0.634506),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(864, 125), Vector2(864, 129)]
+}
+
+[sub_resource type="Animation" id="Animation_cqly6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button_5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(173, 378)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button_4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(404, 227)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button_6:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459, 473)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button_3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(671, 302)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Button_7:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(899, 430)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button_2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(864, 125)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ja6b"]
+_data = {
+&"Floating_Buttons": SubResource("Animation_wu6l1"),
+&"RESET": SubResource("Animation_cqly6")
+}
+
 [node name="Minigame_2" type="Node2D"]
 script = ExtResource("1_rfxq2")
 
@@ -126,10 +308,10 @@ position = Vector2(-5, -5)
 [node name="Directions" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0)
 clip_contents = false
-offset_left = 152.0
-offset_top = 29.0
-offset_right = 886.0
-offset_bottom = 178.0
+offset_left = 155.0
+offset_top = 46.0
+offset_right = 889.0
+offset_bottom = 195.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -148,10 +330,10 @@ autoplay = "floating_directions"
 
 [node name="HeartsClickedTracker" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = -105.0
-offset_top = 570.0
-offset_right = 596.0
-offset_bottom = 698.0
+offset_left = 172.0
+offset_top = 82.0
+offset_right = 873.0
+offset_bottom = 210.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -171,9 +353,9 @@ autoplay = "position_tracker"
 
 [node name="Button_1" type="TextureButton" parent="."]
 offset_left = 100.0
-offset_top = 161.0
+offset_top = 159.0
 offset_right = 320.0
-offset_bottom = 367.0
+offset_bottom = 365.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -181,9 +363,9 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_2" type="TextureButton" parent="."]
 offset_left = 864.0
-offset_top = 127.0
+offset_top = 125.0
 offset_right = 1084.0
-offset_bottom = 333.0
+offset_bottom = 331.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -191,9 +373,9 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_3" type="TextureButton" parent="."]
 offset_left = 671.0
-offset_top = 304.0
+offset_top = 302.0
 offset_right = 891.0
-offset_bottom = 510.0
+offset_bottom = 508.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -201,9 +383,9 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_4" type="TextureButton" parent="."]
 offset_left = 404.0
-offset_top = 229.0
+offset_top = 227.0
 offset_right = 624.0
-offset_bottom = 435.0
+offset_bottom = 433.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -211,9 +393,9 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_5" type="TextureButton" parent="."]
 offset_left = 173.0
-offset_top = 376.0
+offset_top = 378.0
 offset_right = 393.0
-offset_bottom = 582.0
+offset_bottom = 584.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -221,9 +403,9 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_6" type="TextureButton" parent="."]
 offset_left = 459.0
-offset_top = 471.0
+offset_top = 473.0
 offset_right = 679.0
-offset_bottom = 677.0
+offset_bottom = 679.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
@@ -231,13 +413,19 @@ script = ExtResource("3_mmgun")
 
 [node name="Button_7" type="TextureButton" parent="."]
 offset_left = 899.0
-offset_top = 428.0
+offset_top = 430.0
 offset_right = 1119.0
-offset_bottom = 634.0
+offset_bottom = 636.0
 scale = Vector2(0.657582, 0.657582)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_rfxq2")
 script = ExtResource("3_mmgun")
+
+[node name="ButtonAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1ja6b")
+}
+autoplay = "Floating_Buttons"
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
