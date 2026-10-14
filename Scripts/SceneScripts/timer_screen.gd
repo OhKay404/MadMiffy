@@ -1,18 +1,18 @@
 extends Node2D
 @onready var heart_container: HBoxContainer = $HeartContainer
-@onready var heart: TextureRect = $HeartContainer/Heart
-@onready var heart_2: TextureRect = $HeartContainer/Heart2
-@onready var heart_3: TextureRect = $HeartContainer/Heart3
-@onready var heart_4: TextureRect = $HeartContainer/Heart4
-@onready var heart_5: TextureRect = $HeartContainer/Heart5
+@onready var heart: TextureRect = $Heart
+@onready var heart_2: TextureRect = $Heart2
+@onready var heart_3: TextureRect = $Heart3
+@onready var heart_4: TextureRect = $Heart4
+@onready var heart_5: TextureRect = $Heart5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
 var time
 
 func _ready() -> void:
+	await Timer(3.0)
 	MusicManager.play_song(MusicManager.timer)
-	await Timer(3.0) # using the function created
 	
 	if Global.minigames_done < 4: # if you havent completed 2 minigames yet 
 		Global.minigames_done = Global.minigames_done + 1
@@ -36,18 +36,22 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			heart_5.hide()
 		3:
 			heart_5.hide()
-			heart_4.hide()
+			heart.hide()
 		2:
 			heart_5.hide()
+			heart.hide()
+			heart_4.hide()
+		1:
+			heart_5.hide()
+			heart.hide()
 			heart_4.hide()
 			heart_3.hide()
-		1:
+		0:
 			heart_5.hide()
 			heart_4.hide()
 			heart_3.hide()
 			heart_2.hide()
-		0:
-			heart_container.hide() # just hides everything
+			heart.hide()
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)

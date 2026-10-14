@@ -155,10 +155,10 @@ script = ExtResource("5_xea2i")
 
 [node name="Directions" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 304.0
-offset_top = 145.0
-offset_right = 841.0
-offset_bottom = 232.0
+offset_left = 329.0
+offset_top = 144.0
+offset_right = 866.0
+offset_bottom = 231.0
 theme_override_colors/default_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_selected_color = Color(0.945098, 0.956863, 0.858824, 1)
 theme_override_colors/font_outline_color = Color(0.411765, 0.462745, 0.207843, 1)
@@ -176,22 +176,18 @@ libraries = {
 autoplay = "Float"
 
 [connection signal="button_down" from="Mole1" to="Mole1" method="_on_button_down"]
-[connection signal="button_up" from="Mole1" to="Mole1" method="_on_button_up"]
 [connection signal="mouse_entered" from="Mole1" to="Mole1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Mole1" to="Mole1" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole1" to="." method="_on_mole_1_pressed"]
 [connection signal="button_down" from="Mole2" to="Mole2" method="_on_button_down"]
-[connection signal="button_up" from="Mole2" to="Mole2" method="_on_button_up"]
 [connection signal="mouse_entered" from="Mole2" to="Mole2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Mole2" to="Mole2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole2" to="." method="_on_mole_2_pressed"]
 [connection signal="button_down" from="Mole3" to="Mole3" method="_on_button_down"]
-[connection signal="button_up" from="Mole3" to="Mole3" method="_on_button_up"]
 [connection signal="mouse_entered" from="Mole3" to="Mole3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Mole3" to="Mole3" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole3" to="." method="_on_mole_3_pressed"]
 [connection signal="button_down" from="Mole4" to="Mole4" method="_on_button_down"]
-[connection signal="button_up" from="Mole4" to="Mole4" method="_on_button_up"]
 [connection signal="mouse_entered" from="Mole4" to="Mole4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Mole4" to="Mole4" method="_on_mouse_exited"]
 [connection signal="pressed" from="Mole4" to="." method="_on_mole_4_pressed"]
