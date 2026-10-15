@@ -11,8 +11,8 @@ extends Node2D
 var time
 
 func _ready() -> void:
-	await Timer(3.0)
 	MusicManager.play_song(MusicManager.timer)
+	await Timer(3.0)
 	
 	if Global.minigames_done < 4: # if you havent completed 2 minigames yet 
 		Global.minigames_done = Global.minigames_done + 1
