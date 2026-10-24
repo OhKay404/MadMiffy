@@ -28,8 +28,8 @@ MadMiffy is a collection of minigames consisting of different mechanics dependin
 The game uses global variables `minigames_done` and `lives` to track the player's progress, and a `ThemedTimer` to track the time remaining in each minigame. The player starts with 5 lives in the form of hearts, and loses a life each time the player runs out of time before completing a minigame. If the player fails a minigame, the minigame repeats until the player passes or runs out of lives.
 
 ## Credits
-- Changing sprite direction: [Mostly Mad Productions on Youtube](https://www.youtube.com/watch?v=xSs1Qx70Uck&t=10s "Mostly Mad Productions")
-- Walking & idle animations and animation code in minigame 1: [DevWorm on Youtube](https://www.youtube.com/watch?v=GMyw3eHDw7s&t=2s "DevWorm")
+- Changing sprite direction: [Mostly Mad Productions on YouTube](https://www.youtube.com/watch?v=xSs1Qx70Uck&t=10s "Mostly Mad Productions")
+- Walking & idle animations and animation code in minigame 1: [DevWorm on YouTube](https://www.youtube.com/watch?v=GMyw3eHDw7s&t=2s "DevWorm")
 - Background: [ninazaiid on Pinterest](https://www.pinterest.com/pin/666814288625883481/)
 - Minigame 1 Sprite: [Pinterest](https://www.pinterest.com/pin/666814288625883495/), unknown creator
 - Heart: [riri2090 on Pinterest](https://www.pinterest.com/pin/666814288625883505/)
@@ -44,6 +44,12 @@ The game uses global variables `minigames_done` and `lives` to track the player'
 - Minigame 4 Miffy: [oneriotofemotion on Pinterest](https://www.pinterest.com/pin/666814288626703818/)
 - Minigame 4 Grass Overlay: [ibrahimbarch2027 on Pinterest](https://www.pinterest.com/pin/666814288626753742/)
 - Settings Screen Miffy: [kate22567 on Pinterest](https://www.pinterest.com/pin/666814288626703831/)
+- Music: [chajamakesmusic on Itch.io](https://chajamakesmusic.itch.io/cute-and-silly-rpg-music-pack)
+- Stylizing H-Sliders: [Godot Forums](https://forum.godotengine.org/t/looking-for-a-slider-theme-tutorial/25351/2)
+- Using H-Sliders to adjust volume: [Chaff Games on YouTube](https://www.youtube.com/watch?v=IPmfeGx90nY&t=20s))
+- Using BB Code: [Godot Docs](https://docs.godotengine.org/en/latest/tutorials/ui/bbcode_in_richtextlabel.html)
+- OptionButton Popup Menu Themes: [Code Artist on YouTube](https://www.youtube.com/watch?v=jFU_BFRCh-s)
+- Creating Tweens: [Christophe on Itch.io](https://qaqelol.itch.io/tweens)
 
 ## AI Usage
 I used ChatGPT and Gemini to debug. When I did not understand what certain errors meant in my code, or when I needed to know certain syntax (e.g. parsing an integer as a string), I used AI to understand why the error occurred, how to approach the error, and how syntax was used. All code was implemented by me.
