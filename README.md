@@ -30,12 +30,20 @@ The game uses global variables `minigames_done` and `lives` to track the player'
 ## Credits
 - Changing sprite direction: [Mostly Mad Productions on Youtube](https://www.youtube.com/watch?v=xSs1Qx70Uck&t=10s "Mostly Mad Productions")
 - Walking & idle animations and animation code in minigame 1: [DevWorm on Youtube](https://www.youtube.com/watch?v=GMyw3eHDw7s&t=2s "DevWorm")
-- Background: [ninazaiid on Pinterest](https://www.pinterest.com/pin/666814288625883481/ "Pinterest")
-- Minigame 1 Sprite: [Pinterest](https://www.pinterest.com/pin/666814288625883495/ "Pinterest"), unknown creator
-- Heart: [riri2090 on Pinterest](https://www.pinterest.com/pin/666814288625883505/ "Pinterest")
-- Miffy Holding Teddy Bear: [CreatiefSimpel on Pinterest](https://www.pinterest.com/pin/666814288625883497/ "Pinterest")
-- Miffy Holding Balloons: [carlawolff1982 on Pinterest](https://www.pinterest.com/pin/666814288625883500/ "Pinterest")
-- Crying Miffy Face: [Pinterest](https://www.pinterest.com/pin/666814288625883499/ "Pinterest"), unknown creator
+- Background: [ninazaiid on Pinterest](https://www.pinterest.com/pin/666814288625883481/)
+- Minigame 1 Sprite: [Pinterest](https://www.pinterest.com/pin/666814288625883495/), unknown creator
+- Heart: [riri2090 on Pinterest](https://www.pinterest.com/pin/666814288625883505/)
+- Miffy Holding Teddy Bear: [CreatiefSimpel on Pinterest](https://www.pinterest.com/pin/666814288625883497/)
+- Miffy Holding Balloons: [carlawolff1982 on Pinterest](https://www.pinterest.com/pin/666814288625883500/)
+- Crying Miffy Face: [Pinterest](https://www.pinterest.com/pin/666814288625883499/), unknown creator
+- Bread: [doungruthaic58 on Pinterest](https://www.pinterest.com/pin/666814288626299157/)
+- Strawberry Cake: [cocoonpoppy on Pinterest](https://www.pinterest.com/pin/666814288626299123/)
+- Melon Bread: [yuyuzclub on Pinterest](https://www.pinterest.com/pin/666814288626314322/)
+- Pancake Stack: [onwaillust on Pinterest](https://www.pinterest.com/pin/666814288626299121/)
+- Minigame 3 Table: [Phsyki3 on Pinterest](https://www.pinterest.com/pin/666814288626314436/)
+- Minigame 4 Miffy: [oneriotofemotion on Pinterest](https://www.pinterest.com/pin/666814288626703818/)
+- Minigame 4 Grass Overlay: [ibrahimbarch2027 on Pinterest](https://www.pinterest.com/pin/666814288626753742/)
+- Settings Screen Miffy: [kate22567 on Pinterest](https://www.pinterest.com/pin/666814288626703831/)
 
 ## AI Usage
 I used ChatGPT and Gemini to debug. When I did not understand what certain errors meant in my code, or when I needed to know certain syntax (e.g. parsing an integer as a string), I used AI to understand why the error occurred, how to approach the error, and how syntax was used. All code was implemented by me.
