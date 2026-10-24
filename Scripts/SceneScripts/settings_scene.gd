@@ -7,7 +7,7 @@ func _ready() -> void:
 	$ToggleVolume.button_pressed = MusicManager.music_enabled
 	if MusicManager.music_enabled:
 		$VolumeOnText.text = "On"
-		MusicManager.play_song(MusicManager.title)
+		#MusicManager.play_song(MusicManager.title)
 	else:
 		$VolumeOnText.text = "Off"
 
